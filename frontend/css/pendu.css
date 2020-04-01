@@ -1,0 +1,36 @@
+.titre_pendu {
+  float: left;
+  width: 100%;
+  height: 90%;
+  text-align: center;
+}
+.titre_form {
+  display : inline-block;
+  width: 60%;
+  height: auto;
+  text-align: center;
+  background-color: yellow;
+  border: 7px solid red;
+  padding-bottom: 10px;
+  padding-top: 15px
+}
+
+.logo_ephec .img_github {
+  display: inline-block;
+
+}
+#img_github {
+  margin-left: 200px;
+}
+#logo_ephec {
+  margin-left: 50px;
+}
+.zone_mot {
+  margin-bottom: 400px;
+  margin-top: 300px;
+  display: block; 
+
+}
+body {
+  background-color: grey
+}
