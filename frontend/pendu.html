@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -13,7 +14,8 @@
 
   <!-- Mise en place du corps de la page (Combien de div ? Comment on divise la page ? ...) -->
   <body>
-    <div class="page_principale">
+
+    <div class="page_principale" style="width:100%; display:inline-block; float:center">
 
       <!-- Ici un div important car c'est là qu'on mettre les lettres, le bonhomme et la case où le mot se completera-->
       <div class="tableau_jeu">
@@ -22,11 +24,11 @@
           <div class="titre_form"
           <h1 id="titre_div_titre_pendu"> <b>Jeu du pendu - DevWeb 1<b> </h1>
           </div>
-
+        </div>
           <!-- Mise en place de la partie mot et score -->
           <div class=zone_jeu id="zone_jeu_gauche">
             <div class="consigne" id="consignes">
-              Consignes : <br><strong> Tapez sur les lettres de votre clavier et trouvez le mot</strong>
+              Consignes : <br><strong> Tapez sur les lettres de votre clavier et trouvez le mot </strong>
             </div>
             <div class="consigne" id="mot">
               Mot à trouver <!-- remplacer par le js-->
@@ -37,20 +39,24 @@
               Mots restants : <strong> 10 </strong>
             </div>
             <div>
-            <input type="button" value:="Commencer la partie" onclick="launchGame()"/>
+            <input type="button" value="Commencer la partie" onclick="launchGame()"/>
             </div>
           </div>
 
           <!-- Mise en place de la partie droite du jeu, celle contenant les images du bonhomme-->
 
           <div class=image_bonhonne>
-            <img src="http://www.fse-lahulpe.be/web/images/chefs/martin_michotte.jpg" alt="Image du pendu"/>
+            <img src="http://www.fse-lahulpe.be/web/images/chefs/martin_michotte.jpg" alt="Image du pendu" style="height:220px"/>
           </div>
+        </div>
+      </div>
+
+
 
           <!-- Mise en place de la partie clavier -->
 
           <div class="clavier" id="clavier">
-            <div class="apercu_clavier" id="apercu_clavier">
+            <div class="apercu_clavier" id="apercu_clavier" style="height:130px; padding-left: 50px; width:650px">
               <div class="lettres">A</div>
               <div class="lettres">B</div>
               <div class="lettres">C</div>
@@ -64,9 +70,10 @@
               <div class="lettres">K</div>
               <div class="lettres">L</div>
               <div class="lettres">M</div>
+              <div class="saut_ligne"></div>
               <div class="lettres">N</div>
+
               <!-- div saut de ligne, pour pas que le clavier soit trop long-->
-              <div class="saut_ligne">
               <div class="lettres">O</div>
               <div class="lettres">P</div>
               <div class="lettres">Q</div>
@@ -79,12 +86,16 @@
               <div class="lettres">Y</div>
               <div class="lettres">Z</div>
             </div>
+          </div>
 
 
 
 
+</div>
 
 
   </body>
+
   <footer>
     <p> Toutes les informations à propos de nous et de notre travail sur <a href="aboutUs.html" target="_blank"> ce site </a></p>
+  </footer>

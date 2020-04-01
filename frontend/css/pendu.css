@@ -1,3 +1,93 @@
+* {
+  margin:0px;
+  padding:0px;
+}
+
+body {
+  margin:0px
+  padding:0px;
+  width:100%;
+  background-color: none
+}
+
+input {
+  width:200px;
+  height: auto;
+  /* Coin arrondi */
+  border: #333 1px solid;
+}
+
+#zone_jeu_gauche {
+  width: 40%;
+  float: left;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+  height: auto;
+  font-size: 20px;
+  font-family: Calibri;
+  color: #666666;
+  text-align: left;
+}
+.image_bonhonne {
+  width: auto;
+  float: right;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+  height: auto;
+}
+
+.clavier {
+  width: 300px;
+  float:center;
+  text-align: center;
+  height: 100px;
+  margin-bottom:  200px;
+
+
+}
+
+.apercu_clavier {
+  width: 200px;
+  float: center;
+  height: 20px;
+  text-align: center;
+  border: #333 1px solid;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  background-color: #ccffee;
+  border: #736472 1px solid;
+  color: #736472;
+  font-size: 20px;
+  padding-bottom: 10px;
+  padding-top: 16px;
+  margin-bottom: 20px;
+  margin-left: 40px;
+}
+
+.lettres {
+  float: left;
+  margin: 4px;
+  text-align: center;
+  width: 35px;
+  height: 30px;
+  padding-top: 5px;
+  background-color: #73de89;
+  border: #333 1px solid;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+}
+.saut_ligne {
+  width: 100%;
+  height: 20px;
+  display: inline-block;
+}
+
+.zone_jeu_gauche {
+
+}
+
 .titre_pendu {
   float: left;
   width: 100%;
@@ -15,22 +105,13 @@
   padding-top: 15px
 }
 
-.logo_ephec .img_github {
-  display: inline-block;
-
-}
-#img_github {
-  margin-left: 200px;
-}
-#logo_ephec {
-  margin-left: 50px;
-}
 .zone_mot {
   margin-bottom: 400px;
   margin-top: 300px;
-  display: block; 
+  display: block;
 
 }
-body {
-  background-color: grey
+
+footer {
+  text-align:  center;
 }
