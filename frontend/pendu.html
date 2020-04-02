@@ -1,27 +1,26 @@
 <!doctype HTML>
 <html>
 
-  <!-- Entête de page -->
-  <head>
+<!-- Entête de page -->
 
-    <!-- Création du type de l'html et ces paramètres -->
+<head>
 
-    <meta http-equiv="content-type" content="text/html; charset=utf-8; fr">
-    <title> Projet de Bloc 1 - ASD - Le Pendu </title>
-    <meta name="desciption" content="Il s'agit dun projet dans le cadre du cours d'Aspects Structures et Données">
+  <!-- Création du type de l'html et ces paramètres -->
 
-    <!-- Lien des différents fichiers de notre page -->
+  <meta http-equiv="content-type" content="text/html; charset=utf-8; fr">
+  <title> Projet de Bloc 1 - ASD - Le Pendu </title>
+  <meta name="desciption" content="Il s'agit dun projet dans le cadre du cours d'Aspects Structures et Données">
 
-    <link href='css/pendu.css' rel='stylesheet' type='text/css'/>
-    <script src='js/pendu.js'></script>
+  <!-- Lien des différents fichiers de notre page -->
 
-  </head>
+  <link href='css/pendu.css' rel='stylesheet' type='text/css' />
+  <script src='js/pendu.js'></script>
 
-  <!-- Cors de la page -->
+</head>
 
-  <body>
+<!-- Cors de la page -->
 
-    <!-- Section principale de la page, là où se trouve le titre, le jeu et le clavier -->
+<body>
 
     <div class="page_principale" id="page_principale">
 
@@ -29,36 +28,38 @@
       <div class="espace_ligne" id="espace_titre_haut"></div>
       <div class="espace_ligne" id="espace_titre_haut"></div>
 
-      <!-- Block qui va encadrer le titre (gauche) -->
+    </div>
 
-      <div class="block_g_titre">
+    <!-- Block qui va encadrer le titre (gauche) -->
+
+    <div class="block_g_titre">
+    </div>
+
+    <!-- Section du titre -->
+
+    <div class="page_titre" id="page_titre">
+      <div class="style_page_titre">
+        <h1> Jeu du Pendu </h1>
       </div>
+    </div>
 
-      <!-- Section du titre -->
-
-      <div class="page_titre" id="page_titre">
-        <div class="style_page_titre">
-          <h1> Jeu du Pendu </h1>
-        </div>
-      </div>
-
-      <!-- Block qui encadre le titre (droit) -->
+    <!-- Block qui encadre le titre (droit) -->
 
       <div class="block_d_titre"></div>
 
-      <div class="espace_ligne" id="espace_ligne_titre_jeu">
+    <div class="espace_ligne" id="espace_ligne_titre_jeu">
+    </div>
+    <div class="espace_ligne" id="espace_ligne_titre_jeu">
+    </div>
+
+
+    <!-- Section de la zone jeu (mot à trouver, bonhomme et clavier) -->
+
+    <div class="page_jeu" id="page_jeu">
+      <div class="style_page_jeu" id="style_page_jeu">
       </div>
-      <div class="espace_ligne" id="espace_ligne_titre_jeu">
-      </div>
 
-
-      <!-- Section de la zone jeu (mot à trouver, bonhomme et clavier) -->
-
-      <div class="page_jeu" id="page_jeu">
-        <div class="style_page_jeu" id="style_page_jeu">
-        </div>
-
-        <!-- Section de la zone où le mot devra être completer -->
+      <!-- Section de la zone où le mot devra être completer -->
 
         <div class:"consignes">
           <p id="consignes">
@@ -67,63 +68,74 @@
             Si vous vous voulez des explications supplémentaires, voici le lien <a href="https://fr.wikipedia.org/wiki/Le_Pendu_(jeu)" target="_blank">Wikipedia</a> du jeu.
           </p>
         </div>
-        <div class="espace_ligne">
+        <br>
+        <div class="mot_vide">
+          exemple
         </div>
-        <div class="zone_mot" id="zone_mot">
-
-          <div class="nbr_mot">
-            Il vous reste :
-            <br>
-            <strong> 5 mots </strong>
-          </div>
-            <br>
-          <div class="mot_vide">
-            exemple
-          </div>
-            <br>
-          <div class="score">
-            Votre score est de : <strong> 0/10 </strong>
-          </div>
-            <br>
-          <div class="button_start">
-            <input type="button" value="Commencer la partie" onclick="startGame()">
-          </div>
-
+        <br>
+        <div class="score">
+          Votre score est de : <strong> 0/10 </strong>
+        </div>
+        <br>
+        <div class="button_start">
+          <input type="button" value="Commencer la partie" onclick="startGame()">
         </div>
 
+      </div>
 
-        <!-- Section de la zone des images -->
-          <!-- Trouver de nouvelles images !!! -->
-        <div class="image_bonhonne" id="image_bonhonne">
-          <img id="pendu_image" src="img_pendu/pendu_defaut.png" alt="image du pendu">
-        </div>
 
-        <!-- Section du clavier -->
-        <div class="espace_ligne">
-        </div>
-        <div class="zone_clavier" id="zone_clavier">
+      <!-- Section de la zone des images -->
+      <!-- Trouver de nouvelles images !!! -->
+      <div class="image_bonhonne" id="image_bonhonne">
+        <img id="pendu_image" src="img_pendu/pendu_defaut.png" alt="image du pendu">
+      </div>
 
-          <!-- Setion pour l'apercu des touches du clavier et du clavier -->
+      <!-- Section du clavier -->
+      <div class="espace_ligne">
+      </div>
+      <div class="zone_clavier" id="zone_clavier">
 
-          <div class="apercu_clavier" id="apercu_clavier">
-            <div class="letters" id="a">A</div><div class="letters" id="b">B</div><div class="letters" id="c">C</div><div class="letters" id="d">D</div>
-            <div class="letters" id="e">E</div><div class="letters" id="f">F</div><div class="letters" id="g">G</div><div class="letters" id="h">H</div>
-            <div class="letters" id="i">I</div><div class="letters" id="j">J</div><div class="letters" id="k">K</div><div class="letters" id="l">L</div>
-            <div class="letters" id="m">M</div>
-            <div class="espace_ligne"></div>
-            <div class="letters" id="n">N</div><div class="letters" id="o">O</div><div class="letters" id="p">P</div><div class="letters" id="q">Q</div><div class="letters" id="r">R</div><div class="letters" id="s">S</div><div class="letters" id="t">T</div>
-            <div class="letters" id="u">U</div><div class="letters" id="v">V</div><div class="letters" id="w">W</div><div class="letters" id="w">X</div>
-            <div class="letters" id="y">Y</div><div class="letters" id="z">Z</div>
-          </div>
+        <!-- Setion pour l'apercu des touches du clavier et du clavier -->
+
+        <div class="apercu_clavier" id="apercu_clavier">
+          <div class="letters" id="a">A</div>
+          <div class="letters" id="b">B</div>
+          <div class="letters" id="c">C</div>
+          <div class="letters" id="d">D</div>
+          <div class="letters" id="e">E</div>
+          <div class="letters" id="f">F</div>
+          <div class="letters" id="g">G</div>
+          <div class="letters" id="h">H</div>
+          <div class="letters" id="i">I</div>
+          <div class="letters" id="j">J</div>
+          <div class="letters" id="k">K</div>
+          <div class="letters" id="l">L</div>
+          <div class="letters" id="m">M</div>
+          <div class="espace_ligne"></div>
+          <div class="letters" id="n">N</div>
+          <div class="letters" id="o">O</div>
+          <div class="letters" id="p">P</div>
+          <div class="letters" id="q">Q</div>
+          <div class="letters" id="r">R</div>
+          <div class="letters" id="s">S</div>
+          <div class="letters" id="t">T</div>
+          <div class="letters" id="u">U</div>
+          <div class="letters" id="v">V</div>
+          <div class="letters" id="w">W</div>
+          <div class="letters" id="w">X</div>
+          <div class="letters" id="y">Y</div>
+          <div class="letters" id="z">Z</div>
         </div>
       </div>
     </div>
+  </div>
 
-    <div class="espace_ligne"></div>
-    <div class="espace_ligne"></div>
+  <div class="espace_ligne"></div>
+  <div class="espace_ligne"></div>
 
-    <!-- Zone footer qui contient le lien vers la page des developeurs -->
-    <footer>
-      <p> <strong>Toutes les informations à propos de nous et de notre travail sur <a href="aboutUs.html" target="_blank"> ce site </a></strong></p>
-    </footer>
-  </body>
+  <!-- Zone footer qui contient le lien vers la page des developeurs -->
+  <footer>
+    <p> <strong>Toutes les informations à propos de nous et de notre travail sur <a href="aboutUs.html" target="_blank">
+          ce site </a></strong></p>
+  </footer>
+</body>
