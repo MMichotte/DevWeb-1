@@ -1,101 +1,128 @@
-
-<!DOCTYPE html>
+<!doctype HTML>
 <html>
+
+  <!-- Entête de page -->
   <head>
 
-    <!-- Creation du type d'html et ces paramètes-->
+    <!-- Création du type de l'html et ces paramètres -->
+
     <meta http-equiv="content-type" content="text/html; charset=utf-8; fr">
     <title> Projet de Bloc 1 - ASD - Le Pendu </title>
     <meta name="desciption" content="Il s'agit dun projet dans le cadre du cours d'Aspects Structures et Données">
 
     <!-- Lien des différents fichiers de notre page -->
+
     <link href='css/pendu.css' rel='stylesheet' type='text/css'/>
     <script src='js/pendu.js'></script>
 
-  <!-- Mise en place du corps de la page (Combien de div ? Comment on divise la page ? ...) -->
+  </head>
+
+  <!-- Cors de la page -->
+
   <body>
 
-    <div class="page_principale" style="width:100%; display:inline-block; float:center">
+    <!-- Section principale de la page, là où se trouve le titre, le jeu et le clavier -->
 
-      <!-- Ici un div important car c'est là qu'on mettre les lettres, le bonhomme et la case où le mot se completera-->
-      <div class="tableau_jeu">
-        <!-- Juste le div du titre, comme ça avec le css on pourra faire un beau titre -->
-        <div class="titre_pendu">
-          <div class="titre_form"
-          <h1 id="titre_div_titre_pendu"> <b>Jeu du pendu - DevWeb 1<b> </h1>
-          </div>
-        </div>
-          <!-- Mise en place de la partie mot et score -->
-          <div class=zone_jeu id="zone_jeu_gauche">
-            <div class="consigne" id="consignes">
-              Consignes : <br><strong> Tapez sur les lettres de votre clavier et trouvez le mot </strong>
-            </div>
-            <div class="consigne" id="mot">
-              Mot à trouver <!-- remplacer par le js-->
-            </div>
-            <div class="consigne" id="score">
-              Votre score : <strong> 0/10</strong>
-              <br>
-              Mots restants : <strong> 10 </strong>
-            </div>
-            <div>
-            <input type="button" value="Commencer la partie" onclick="launchGame()"/>
-            </div>
-          </div>
+    <div class="page_principale" id="page_principale" style="width:100%; display:block; text-align:center">
 
-          <!-- Mise en place de la partie droite du jeu, celle contenant les images du bonhomme-->
+      <!-- Saut de ligne caractérisé par des div -->
+      <div class="espace_ligne" id="espace_titre_haut">
 
-          <div class=image_bonhonne>
-            <img src="http://www.fse-lahulpe.be/web/images/chefs/martin_michotte.jpg" alt="Image du pendu" style="height:220px"/>
-          </div>
+      </div>
+      <div class="espace_ligne" id="espace_titre_haut">
+
+      </div>
+
+      <!-- Block qui va encadrer le titre (gauche) -->
+
+      <div class="block_g_titre">
+      </div>
+
+      <!-- Section du titre -->
+
+      <div class="page_titre" id="page_titre">
+        <div class="style_page_titre">
+          <h1> Jeu du Pendu </h1>
         </div>
       </div>
 
+      <!-- Block qui encadre le titre (droit) -->
+
+      <div class="block_d_titre">
+      </div>
+
+      <div class="espace_ligne" id="espace_ligne_titre_jeu">
+      </div>
+      <div class="espace_ligne" id="espace_ligne_titre_jeu">
+      </div>
 
 
-          <!-- Mise en place de la partie clavier -->
+      <!-- Section de la zone jeu (mot à trouver, bonhomme et clavier) -->
 
-          <div class="clavier" id="clavier">
-            <div class="apercu_clavier" id="apercu_clavier" style="height:130px; padding-left: 50px; width:650px">
-              <div class="lettres">A</div>
-              <div class="lettres">B</div>
-              <div class="lettres">C</div>
-              <div class="lettres">D</div>
-              <div class="lettres">E</div>
-              <div class="lettres">F</div>
-              <div class="lettres">G</div>
-              <div class="lettres">H</div>
-              <div class="lettres">I</div>
-              <div class="lettres">J</div>
-              <div class="lettres">K</div>
-              <div class="lettres">L</div>
-              <div class="lettres">M</div>
-              <div class="saut_ligne"></div>
-              <div class="lettres">N</div>
+      <div class="page_jeu" id="page_jeu">
+        <div class="style_page_jeu" id="style_page_jeu">
+        </div>
 
-              <!-- div saut de ligne, pour pas que le clavier soit trop long-->
-              <div class="lettres">O</div>
-              <div class="lettres">P</div>
-              <div class="lettres">Q</div>
-              <div class="lettres">R</div>
-              <div class="lettres">S</div>
-              <div class="lettres">T</div>
-              <div class="lettres">U</div>
-              <div class="lettres">V</div>
-              <div class="lettres">W</div>
-              <div class="lettres">Y</div>
-              <div class="lettres">Z</div>
-            </div>
+        <!-- Section de la zone où le mot devra être completer -->
+
+        <div class:"consignes">
+          <p id="consignes">Le but du jeu est de trouver le mot en tapant les lettres sur le clavier. <br>
+          Si le lettre ne se trouve pas dans le mot, vous "pendez" petit à petit votre bonhomme jusqu'à la pendaison totale. <br>
+          Si vous vous voulez des explications supplémentaires, voici le lien <a href="https://fr.wikipedia.org/wiki/Le_Pendu_(jeu)" target="_blank">Wikipedia</a> du jeu.
+          </p>
+        </div>
+        <div class="espace_ligne">
+        </div>
+        <div class="zone_mot" id="zone_mot">
+
+          <div class="nbr_mot">
+            Il vous reste :
+            <br>
+            <strong> 5 mots </strong>
+          </div>
+            <br>
+          <div class="mot_vide">
+            exemple
+          </div>
+            <br>
+          <div class="score">
+            Votre score est de : <strong> 0/10 </strong>
+          </div>
+            <br>
+          <div class="button_start">
+            <input type="button" value="Commencer la partie" onclick="startGame()">
           </div>
 
+        </div>
 
 
+        <!-- Section de la zone des images -->
+          <!-- Trouver de nouvelles images !!! -->
+        <div class="image_bonhonne" id="image_bonhonne">
+          <img id="pendu_image" src="img_pendu/pendu_defaut.png" alt="image du pendu">
+        </div>
 
-</div>
+        <!-- Section du clavier -->
+        <div class="espace_ligne">
+        </div>
+        <div class="zone_clavier" id="zone_clavier">
 
+          <!-- Setion pour l'apercu des touches du clavier et du clavier -->
+
+          <div class="apercu_clavier" id="apercu_clavier">
+            <div class="letters" id="a">A</div><div class="letters" id="b">B</div><div class="letters" id="c">C</div><div class="letters" id="d">D</div>
+            <div class="letters" id="e">E</div><div class="letters" id="f">F</div><div class="letters" id="g">G</div><div class="letters" id="h">H</div>
+            <div class="letters" id="i">I</div><div class="letters" id="j">J</div><div class="letters" id="k">K</div><div class="letters" id="l">L</div>
+            <div class="letters" id="m">M</div>
+            <div class="espace_ligne"></div>
+            <div class="letters" id="n">N</div><div class="letters" id="o">O</div><div class="letters" id="p">P</div><div class="letters" id="q">Q</div><div class="letters" id="r">R</div><div class="letters" id="s">S</div><div class="letters" id="t">T</div>
+            <div class="letters" id="u">U</div><div class="letters" id="v">V</div><div class="letters" id="w">W</div><div class="letters" id="w">X</div>
+            <div class="letters" id="y">Y</div><div class="letters" id="z">Z</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Zone footer qui contient le lien vers la page des developeurs -->
 
   </body>
-
-  <footer>
-    <p> Toutes les informations à propos de nous et de notre travail sur <a href="aboutUs.html" target="_blank"> ce site </a></p>
-  </footer>
