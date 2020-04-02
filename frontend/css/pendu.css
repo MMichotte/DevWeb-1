@@ -103,7 +103,7 @@
 }
 
 .zone_clavier {
-  width: auto;
+  width: 800px;
   float: left;
   text-align: center;
   height: auto;
@@ -138,5 +138,6 @@ body{
 
 footer {
   float: center;
+  margin-left: 500px; 
 
 }
