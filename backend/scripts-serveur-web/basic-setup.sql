@@ -9,7 +9,7 @@ begin
 
   set dbPath = (select db_property ('file'));   
   set dbName = (select db_property('name')) + '.db';
-  set dbPath = left(db_path,locate(db_path,'\backend',-1)) + 'frontend\';
+  set dbPath = left(db_path,locate(dbPath,'\backend',-1)) + 'frontend\';
 
   return dbPath;
 end;
@@ -49,7 +49,7 @@ begin
 end;
 
 
--- Web-services -- 
+-- Web-services de base-- 
 
 CREATE SERVICE "js" TYPE 'RAW' AUTHORIZATION OFF USER "DBA" URL ON METHODS 'GET' AS call dba.http_getJS(:url);
 
