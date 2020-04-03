@@ -23,4 +23,4 @@ BEGIN
     
 END;
 
-CREATE SERVICE "addUser" TYPE 'JSON' AUTHORIZATION OFF USER "DBA" URL ON METHODS 'GET' AS call DBA.proc_addUser();
+CREATE SERVICE "addUser" TYPE 'JSON' AUTHORIZATION OFF USER "DBA" URL ON METHODS 'GET' AS call DBA.proc_addUser(n = :nom, pn = :prenom, ps = :pseudo, pwd = :mdp);

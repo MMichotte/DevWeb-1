@@ -9,7 +9,7 @@ begin
 
   set dbPath = (select db_property ('file'));   
   set dbName = (select db_property('name')) + '.db';
-  set dbPath = left(db_path,locate(db_path,'\backend',-1)) + 'frontend\';
+  set dbPath = left(db_path,locate(dbPath,'\backend',-1)) + 'frontend\';
 
   return dbPath;
 end;
