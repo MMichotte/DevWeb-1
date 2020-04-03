@@ -22,7 +22,7 @@ CREATE TABLE `utilisateurs` (
     `userId` int DEFAULT AUTOINCREMENT NOT NULL ,
     `nom` varchar(50)  NOT NULL ,
     `prenom` varchar(50)  NOT NULL ,
-    `pseudo` varchar(50)  NOT NULL ,
+    `pseudo` varchar(50) UNIQUE  NOT NULL ,
     `mdp` varchar(100)  NOT NULL ,
     PRIMARY KEY (`userId`)
 );
