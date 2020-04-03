@@ -4,7 +4,7 @@ BEGIN
 
     IF EXISTS (
         SELECT pseudo, mdp FROM dba.utilisateurs
-        WHERE pseudo LIKE ps AND mdp like pwd;
+        WHERE pseudo LIKE ps AND mdp like pwd
     )
     THEN RETURN 1;    
     ELSE RETURN 0;   
