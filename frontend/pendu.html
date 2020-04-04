@@ -1,141 +1,113 @@
 <!doctype HTML>
 <html>
 
-<!-- Entête de page -->
+  <!-- Entête de page -->
 
-<head>
+  <head>
 
-  <!-- Création du type de l'html et ces paramètres -->
+    <!-- Création du type de l'html et ces paramètres -->
 
-  <meta http-equiv="content-type" content="text/html; charset=utf-8; fr">
-  <title> Projet de Bloc 1 - ASD - Le Pendu </title>
-  <meta name="desciption" content="Il s'agit dun projet dans le cadre du cours d'Aspects Structures et Données">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8; fr">
+    <title> Projet de Bloc 1 - ASD - Le Pendu </title>
+    <meta name="desciption" content="Il s'agit dun projet dans le cadre du cours d'Aspects Structures et Données">
 
-  <!-- Lien des différents fichiers de notre page -->
+    <!-- Lien des différents fichiers de notre page -->
 
-  <link href='css/pendu.css' rel='stylesheet' type='text/css' />
-  <script src='js/pendu.js'></script>
+    <link href='css/pendu.css' rel='stylesheet' type='text/css' />
+    <script src='js/pendu.js'></script>
 
-</head>
+  </head>
 
-<!-- Cors de la page -->
+  <!-- Cors de la page -->
 
-<body>
+  <body>
 
-    <div class="page_principale" id="page_principale">
+    <!-- Section de la bannière avec les liens de connexions et de About us -->
 
-      <!-- Saut de ligne caractérisé par des div -->
-      <div class="espace_ligne" id="espace_titre_haut"></div>
-      <div class="espace_ligne" id="espace_titre_haut"></div>
-
-    </div>
-
-    <!-- Block qui va encadrer le titre (gauche) -->
-
-    <div class="block_g_titre">
-    </div>
+    <section id="color_banner">
+        <ul id="style_banner">
+        	<li><a href="#">Connexion</a></li>
+        	<li><a href="aboutUs.html" target="_blank">About Us</a></li>
+        </ul>
+    </section>
 
     <!-- Section du titre -->
-
-    <div class="page_titre" id="page_titre">
-      <div class="style_page_titre">
-        <h1> Jeu du Pendu </h1>
+    <section class="titre_jeu" id="titre_jeu">
+      <div id="style_titre">
+        <h1> Le jeu du pendu </h1>
       </div>
-    </div>
+    </section>
 
-    <!-- Block qui encadre le titre (droit) -->
+    <section class="lang_regle" id="lang_regle">
+      <!-- Div choix de langues -->
+      <div id="choix_langues">
 
-      <div class="block_d_titre"></div>
-
-    <div class="espace_ligne" id="espace_ligne_titre_jeu">
-    </div>
-    <div class="espace_ligne" id="espace_ligne_titre_jeu">
-    </div>
-
-
-    <!-- Section de la zone jeu (mot à trouver, bonhomme et clavier) -->
-
-    <div class="page_jeu" id="page_jeu">
-      <div class="style_page_jeu" id="style_page_jeu">
-      </div>
-
-      <!-- Section de la zone où le mot devra être completer -->
-
-        <div class:"consignes">
-          <p id="consignes">
-            Le but du jeu est de trouver le mot en tapant les lettres sur le clavier. <br>
-            Si le lettre ne se trouve pas dans le mot, vous "pendez" petit à petit votre bonhomme jusqu'à la pendaison totale. <br>
-            Si vous vous voulez des explications supplémentaires, voici le lien <a href="https://fr.wikipedia.org/wiki/Le_Pendu_(jeu)" target="_blank">Wikipedia</a> du jeu.
-          </p>
+          <!--surround the select box with a "custom-select" DIV element. Remember to set the width:-->
+          <h1>Choose your language for the game</h1>
+          <div class="lang_choices">
+             <select name="language" id="language">
+                <option selected disabled>Choose your language</option>
+                <option value="fr">Français</option>
+                <option value="en">English</option>
+                <option value="nl">Nederlands</option>
+             </select>
+          </div>
         </div>
-        <br>
-        <div class="mot_vide">
-          exemple
-        </div>
-        <br>
-        <div class="score">
-          Votre score est de : <strong> 0/10 </strong>
-        </div>
-        <br>
-        <div class="button_start">
-          <input type="button" value="Commencer la partie" onclick="startGame()">
-        </div>
+    </section>
 
+        <!-- Div regles vers le lien wikipedia -->
+      <section class="regles_jeu">
+        <div class="rules" id="rules">
+          <strong>Voici les règles du jeu du pendu : </strong><br><br>
+          Le but est de trouver le mot avant d'être tout à fait pendu. <br>
+          Si le lettre ne se trouve pas dans le mot, vous "pendez" petit à petit votre bonhomme jusqu'à la pendaison totale. <br>
+          Si vous vous voulez des explications supplémentaires, voici le lien <a href="https://fr.wikipedia.org/wiki/Le_Pendu_(jeu)" target="_blank">Wikipedia</a> du jeu.
+        </div>
+    </section>
+
+    <!-- Section de zone de jeu (classement, mot en cours et image) -->
+
+    <section class="zone_jeu">
+      <div class="div" id="tableau_classement">
+        <h2> Classement des joueurs </h2>
+        <table class="table_jeu" id="table_jeu">
+          <tbody>
+            <tr>
+            <th> Nom du joueur </th>
+            <th> Score du joueur </th>
+            </tr>
+
+            <tr>
+            <th> Martin M </th>
+            <th> 8 </th>
+            </tr>
+
+            <tr>
+            <th> Martin P </th>
+            <th> 8 </th>
+            </tr>
+
+            <tr>
+            <th> Geoffrey B </th>
+            <th> 8 </th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="div" id="mot_en_cours">
+        <p>Voici le mot en cours <br><br><br> <strong> Mot en cours </strong></p>
       </div>
 
 
-      <!-- Section de la zone des images -->
-      <!-- Trouver de nouvelles images !!! -->
-      <div class="image_bonhonne" id="image_bonhonne">
-        <img id="pendu_image" src="img_pendu/pendu_defaut.png" alt="image du pendu">
+      <div class="div" id="image_pendu">
+        <img src="img_pendu/pendu_defaut.png">
       </div>
 
-      <!-- Section du clavier -->
-      <div class="espace_ligne">
-      </div>
-      <div class="zone_clavier" id="zone_clavier">
 
-        <!-- Setion pour l'apercu des touches du clavier et du clavier -->
+  </section>
 
-        <div class="apercu_clavier" id="apercu_clavier">
-          <div class="letters" id="a">A</div>
-          <div class="letters" id="b">B</div>
-          <div class="letters" id="c">C</div>
-          <div class="letters" id="d">D</div>
-          <div class="letters" id="e">E</div>
-          <div class="letters" id="f">F</div>
-          <div class="letters" id="g">G</div>
-          <div class="letters" id="h">H</div>
-          <div class="letters" id="i">I</div>
-          <div class="letters" id="j">J</div>
-          <div class="letters" id="k">K</div>
-          <div class="letters" id="l">L</div>
-          <div class="letters" id="m">M</div>
-          <div class="espace_ligne"></div>
-          <div class="letters" id="n">N</div>
-          <div class="letters" id="o">O</div>
-          <div class="letters" id="p">P</div>
-          <div class="letters" id="q">Q</div>
-          <div class="letters" id="r">R</div>
-          <div class="letters" id="s">S</div>
-          <div class="letters" id="t">T</div>
-          <div class="letters" id="u">U</div>
-          <div class="letters" id="v">V</div>
-          <div class="letters" id="w">W</div>
-          <div class="letters" id="w">X</div>
-          <div class="letters" id="y">Y</div>
-          <div class="letters" id="z">Z</div>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <div class="espace_ligne"></div>
-  <div class="espace_ligne"></div>
 
-  <!-- Zone footer qui contient le lien vers la page des developeurs -->
-  <footer>
-    <p> <strong>Toutes les informations à propos de nous et de notre travail sur <a href="aboutUs.html" target="_blank">
-          ce site </a></strong></p>
-  </footer>
+
 </body>
