@@ -27,7 +27,9 @@
     <section id="color_banner">
         <ul id="style_banner">
         	<li><a href="#">Connexion</a></li>
-        	<li><a href="aboutUs.html" target="_blank">About Us</a></li>
+        	<li><a href="https://fr.wikipedia.org/wiki/Le_Pendu_(jeu)" target="_blank">About the game</a></li>
+          <li><a href="aboutUs.html" target="_blank">About Us</a></li>
+          <li><a href="rajoutMot.html" target="_blank">More Words ?</a></li>
         </ul>
     </section>
 
@@ -55,7 +57,7 @@
         </div>
     </section>
 
-        <!-- Div regles vers le lien wikipedia -->
+    <!-- Div des regles du jeu
       <section class="regles_jeu">
         <div class="rules" id="rules">
           <strong>Voici les règles du jeu du pendu : </strong><br><br>
@@ -64,6 +66,7 @@
           Si vous vous voulez des explications supplémentaires, voici le lien <a href="https://fr.wikipedia.org/wiki/Le_Pendu_(jeu)" target="_blank">Wikipedia</a> du jeu.
         </div>
     </section>
+  -->
 
     <!-- Section de zone de jeu (classement, mot en cours et image) -->
 
@@ -96,15 +99,54 @@
       </div>
 
       <div class="div" id="mot_en_cours">
-        <p>Voici le mot en cours <br><br><br> <strong> Mot en cours </strong></p>
+        <p>Voici le mot en cours</p>
+        <p id="emplacement_mot"> <strong> Mot en cours </strong></p>
+        <input type="button" value="Commencer la partie"></input>
       </div>
 
 
       <div class="div" id="image_pendu">
         <img src="img_pendu/pendu_defaut.png">
       </div>
+  </section>
 
+  <section class="clavier" onkeydown="clavier(event)">
+    <div class="zone_clavier" id="zone_clavier">
 
+      <!-- Setion pour l'apercu des touches du clavier et du clavier -->
+
+      <div class="apercu_clavier" id="apercu_clavier">
+        <div class="letters" id="lettre_a">A</div>
+        <div class="letters" id="lettre_b">B</div>
+        <div class="letters" id="lettre_lettre_c">C</div>
+        <div class="letters" id="lettre_d">D</div>
+        <div class="letters" id="lettre_lettre_lettre_e">E</div>
+        <div class="letters" id="lettre_lettre_f">F</div>
+        <div class="letters" id="lettre_g">G</div>
+        <div class="letters" id="lettre_h">H</div>
+        <div class="letters" id="lettre_i">I</div>
+        <div class="letters" id="lettre_j">J</div>
+        <div class="letters" id="lettre_k">K</div>
+        <div class="letters" id="lettre_l">L</div>
+        <div class="letters" id="lettre_m">M</div>
+        <div class="espace_ligne"></div>
+        <div class="letters" id="lettre_n">N</div>
+        <div class="letters" id="lettre_o">O</div>
+        <div class="letters" id="lettre_p">P</div>
+        <div class="letters" id="lettre_q">Q</div>
+        <div class="letters" id="lettre_r">R</div>
+        <div class="letters" id="lettre_s">S</div>
+        <div class="letters" id="lettre_t">T</div>
+        <div class="letters" id="lettre_u">U</div>
+        <div class="letters" id="lettre_v">V</div>
+        <div class="letters" id="lettre_w">W</div>
+        <div class="letters" id="lettre_w">X</div>
+        <div class="letters" id="lettre_y">Y</div>
+        <div class="letters" id="lettre_z">Z</div>
+      </div>
+    </div>
+  </div>
+</div>
   </section>
 
 
