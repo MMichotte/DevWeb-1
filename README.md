@@ -2,9 +2,9 @@
 
 # Présentation de l'équipe
   Pour la réalisation de ce projet, nous sommes un groupe de 3 personnes :
-    Martin Michotte
-    Martin Perdeans
-    Geoffrey Brogniet
+   - Martin Michotte
+   - Martin Perdeans
+   - Geoffrey Brogniet
 # Description du projet
   Note projet est tout simplement la création d'un jeu du pendu via un site web connecté à une base de données.
 
