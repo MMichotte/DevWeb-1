@@ -15,7 +15,7 @@
 
     - Une page html comportant un clavier virtuel, un image dynamique et l'appartition du mot qui bien sûr est à découvrir.
 
-    - Le tableau du classement des joueurs. 
+    - Le tableau du classement des joueurs.
 
     - Une page de connexion/d'inscription qui nous permet de jouer et d'enregristrer notre score dans la base de donnée.
 
