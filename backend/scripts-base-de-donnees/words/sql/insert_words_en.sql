@@ -1,6 +1,5 @@
 INSERT INTO mots (languesId, mot)
 VALUES
-,
 ('en', 'people'),
 ('en', 'because'),
 ('en', 'should'),

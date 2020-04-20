@@ -1,6 +1,5 @@
 INSERT INTO mots (languesId, mot)
 VALUES
-,
 ('fr', 'autres'),
 ('fr', 'encore'),
 ('fr', 'toujours'),
@@ -30,7 +29,6 @@ VALUES
 ('fr', 'prendre'),
 ('fr', 'souvent'),
 ('fr', 'certains'),
-('fr', 'ann�es'),
 ('fr', 'histoire'),
 ('fr', 'surtout'),
 ('fr', 'nouvelle'),
