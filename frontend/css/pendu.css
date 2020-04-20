@@ -241,12 +241,12 @@ th, td {
   width: 20%;
   padding-bottom: 40px;
   padding-top: 0px;
-  margin-top: 10px;
-  margin-bottom: 60px;
+  margin-top: 0px;
+  margin-bottom: 50px;
   margin-left: 100px;
   margin-right: 0px;
   background-color: #EDEEEE;
-  height: 100px;
+  height: 135px;
   border: 4px solid black;
   border-radius: 15px;
 }

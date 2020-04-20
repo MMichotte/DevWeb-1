@@ -14,8 +14,11 @@
     <!-- Lien des différents fichiers de notre page -->
 
     <link href='css/pendu.css' rel='stylesheet' type='text/css' />
-    <script src='js/pendu.js'></script>
-
+    <script src="js/pendu.js"></script>
+    <script src="classement.js"></script>
+    <script type="text/javascript" language="javascript">
+      var mots_a_trouver = "Bonjour; Nul; Oui"
+    </script>
   </head>
 
   <!-- Cors de la page -->
@@ -101,8 +104,13 @@
       <div class="div" id="mot_en_cours">
         <p>Voici le mot en cours</p>
         <p id="emplacement_mot"> <strong> Mot en cours </strong></p>
-        <input type="button" value="Commencer la partie" onclick="startGame()"></input>
+
+      <p> Score actuel : <strong>0/10</strong></p>
+      <input id="score"njk opmù`
+       type="button" value="Débuter" onclick="startGame()" 
+      <input id="ajoutscore" type="button" value="Ajouter le score" onclick="ajoutScore()">
       </div>
+
 
 
       <div class="div" id="image_pendu">
@@ -118,10 +126,10 @@
       <div class="apercu_clavier" id="apercu_clavier">
         <div class="letters" id="lettre_a">A</div>
         <div class="letters" id="lettre_b">B</div>
-        <div class="letters" id="lettre_lettre_c">C</div>
+        <div class="letters" id="lettre_c">C</div>
         <div class="letters" id="lettre_d">D</div>
-        <div class="letters" id="lettre_lettre_lettre_e">E</div>
-        <div class="letters" id="lettre_lettre_f">F</div>
+        <div class="letters" id="lettre_e">E</div>
+        <div class="letters" id="lettre_f">F</div>
         <div class="letters" id="lettre_g">G</div>
         <div class="letters" id="lettre_h">H</div>
         <div class="letters" id="lettre_i">I</div>
