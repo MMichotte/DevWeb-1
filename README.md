@@ -27,4 +27,4 @@
 
 # Style de la page voulu :
 
-<img src="/img/stylePenduHtml.png" alt="Style de la page"/>
+<img src="/../img/stylePenduHtml.png" alt="Style de la page"/>
