@@ -31,7 +31,7 @@
 
 Nous avons divisé notre réalisation en deux grandes catégories, le back-end qui va être la création de la table de données via Sybase mais également les procédures et les services dont notre page Web aura besoin. Et nous aurons la partie front-end qui va être la structure même de la page, les scripts et la mise en forme de notre page Web. 
 
-*** Partie back-end ***
+## Partie back-end 
 
 1. Une base de données qui va enregistrer les mots et les scores. 
 
@@ -42,9 +42,9 @@ Nous avons divisé notre réalisation en deux grandes catégories, le back-end q
     - Un Web Service capable de récupérer les mots et les placer dans l'HTML
     - Un Web Service capable de récupérer la langue souhaité et donc d'y proposer les mots de la langue choisie
     - Un Web Service capable d'ajouter et de récupérer les scores de la table de score ainsi que les nom des joueurs
-    - Un Web Service qui va nous permettre de se connecter à la page et nous permettre de joueur au jeu
+    - Un Web Service qui va nous permettre de se connecter à la page et nous permettre de jouer au jeu
     
-*** Partie front-end ***
+## Partie front-end 
 
 1. Une page Web (HTLM, JS, CSS) permettant d'appeler les webservices et de traiter les réponses, qui propose une interface utilisateur pour :
 
