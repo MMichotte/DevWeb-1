@@ -8,7 +8,7 @@
    - "EN ATTENTE" 
 # Besoin du client
 
-  Nous désirons une page web qui permet de jouer au fameux jeu du Pendu. Le but serait de pourvoir taper via le clavier les lettres du mots, de voir au fur et à mesure des fautes le bonhomme se faire pendre mais aussi d'avoir un classement des joueurs avec les scores.
+  Nous désirons une page web qui permet de jouer au fameux jeu du Pendu. Le but serait de pouvoir taper via le clavier les lettres du mots, de voir au fur et à mesure des fautes le bonhomme se faire pendre mais aussi d'avoir un classement des joueurs avec les scores.
 
   Ce qui serait bien aussi est la possibilité de pouvoir rajouter les mots qu'on veut dans la base de donnée, afin que le jeu nous ressemble un peu plus.
 # Fonctionnalités principales
@@ -23,7 +23,8 @@
 
 # Fonctionnalités supplémentaires
 
-    - Possibilité d'introduire un mode multijoueurs.
+    - Possibilité pour l'utilisateur de rajouter des mots via un fichier csv ou un fichier qui contient une liste de mot.
+    - Possibilité de rajouter une langue dans la base de données. 
     
     
 # Implémentation : aprroche technique 
