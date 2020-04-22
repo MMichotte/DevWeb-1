@@ -31,7 +31,7 @@ Nous avons divisé notre réalisation en deux grandes catégories, le back-end q
 
 ** Partie back-end **
 
-1. Une base de données ([#Tables de la base de données :]) qui va enregistrer les mots et les scores. 
+1. Une base de données ([#Tables de la base de données]) qui va enregistrer les mots et les scores. 
 
 2. Un serveur web qui sera capable de nous fournir les pages HTML, JS et CSS, ainsi que de proposer des Web Services
 
@@ -57,9 +57,9 @@ Nous avons divisé notre réalisation en deux grandes catégories, le back-end q
 
 <img src="frontend/img/stylePenduHtml.png" alt="Style de la page"/>
 
-# Tables de la base de données : 
+# Tables de la base de données  
 
-<img src=""frontend/img/tableImg.png" alt="Image de la table de données" />
+<img src="frontend/img/tableImg.png" alt="Image de la table de données" />
                                                                         
                                                                         
                                                                     
