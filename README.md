@@ -32,7 +32,7 @@ Nous avons divisé notre réalisation en deux grandes catégories, le back-end q
 
 *** Partie back-end ***
 
-1. Une base de données (image de la table)#Tables\_de\_la\_base\_de\_données qui va enregistrer les mots et les scores. 
+1. Une base de données qui va enregistrer les mots et les scores. 
 
 2. Un serveur web qui sera capable de nous fournir les pages HTML, JS et CSS, ainsi que de proposer des Web Services
 
@@ -43,7 +43,7 @@ Nous avons divisé notre réalisation en deux grandes catégories, le back-end q
     - Un Web Service capable d'ajouter et de récupérer les scores de la table de score ainsi que les nom des joueurs
     - Un Web Service qui va nous permettre de se connecter à la page et nous permettre de joueur au jeu
     
-** Partie front-end **
+*** Partie front-end ***
 
 1. Une page Web (HTLM, JS, CSS) permettant d'appeler les webservices et de traiter les réponses, qui propose une interface utilisateur pour :
 
