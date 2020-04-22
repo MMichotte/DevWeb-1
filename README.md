@@ -26,12 +26,13 @@
     - Possibilité d'introduire un mode multijoueurs.
     
     
-# Implémentation : aprroche technique ***
+# Implémentation : aprroche technique 
+
 Nous avons divisé notre réalisation en deux grandes catégories, le back-end qui va être la création de la table de données via Sybase mais également les procédures et les services dont notre page Web aura besoin. Et nous aurons la partie front-end qui va être la structure même de la page, les scripts et la mise en forme de notre page Web. 
 
-** Partie back-end **
+*** Partie back-end ***
 
-1. Une base de données ([#Tables de la base de données]) qui va enregistrer les mots et les scores. 
+1. Une base de données (image de la table)#Tables\_de\_la\_base\_de\_données qui va enregistrer les mots et les scores. 
 
 2. Un serveur web qui sera capable de nous fournir les pages HTML, JS et CSS, ainsi que de proposer des Web Services
 
