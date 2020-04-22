@@ -52,7 +52,7 @@ Nous avons divisé notre réalisation en deux grandes catégories, le back-end q
     - Choisir sa langue pour le jeu
     - Retenir le score de la personne qui joue et l'envoyer via une requête à la base de données
     - Appeler les images de la base de données et les afficher lorsque la personne se trompe de lettre. 
-    - 
+    
 
 # Style de la page voulu :
 
