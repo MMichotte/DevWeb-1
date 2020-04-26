@@ -5,7 +5,7 @@
    - Martin Michotte
    - Martin Perdeans
    - Geoffrey Brogniet
-   - "EN ATTENTE" 
+   - Maxime de Cock 
 # Besoin du client
 
   Nous désirons une page web qui permet de jouer au fameux jeu du Pendu. Le but serait de pouvoir taper via le clavier les lettres du mots, de voir au fur et à mesure des fautes le bonhomme se faire pendre mais aussi d'avoir un classement des joueurs avec les scores.
