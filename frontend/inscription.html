@@ -1,0 +1,27 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type = "text/css" href="css/form.css" />
+    <script src='js/MMichotte-traitement-ajouterUtilisateur.js'></script>
+    <script src='js/inscription.js'></script>
+    <title>Inscription</title>
+</head>
+
+<body>
+    <div class="form">
+        <h1>Inscription</h1>
+        <form id="InscriptionForm" action="#">
+            <input type="text" name="nom" placeholder="Nom" required>
+            <input type="text" name="prenom" placeholder="Prénom" required>
+            <input id="pseudoInput" type="text" name="pseudo" placeholder="Pseudo" required>
+            <input type="password" name="pwd" placeholder="Mot de passe" required>
+            <input id="submitBtn" type="submit" value="Envoyer">
+            <div id="pseudoExisteDejaErreur">Le pseudo existe déjà!</div>
+        </form>
+    </div>
+</body>
+
+</html>
