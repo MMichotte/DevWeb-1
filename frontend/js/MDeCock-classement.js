@@ -3,23 +3,27 @@
 	/*auteur: maxime de cock HE201554 */
 
 	
-	
-	
 	let xhr = new XMLHttpRequest();
 	
 	xhr.open('get', 'classement', true);
 	xhr.onload = 
 		function(){
 		
-		makeTable(JSON.parse(this.responseText), 'Scores');
+		creerTable(JSON.parse(this.responseText), 'table_jeu');
 		}
 	xhr.send();
 	
-	function makeTable(reponseRequete, idBodyTable){
-	
-		let lignes = '<tr><th>Pseudo</th><th>Score</th></tr>';
+	function creerTable(reponseRequete, idBodyTable){
+
+		let table = '<tbody><tr><th> Nom du joueur </th><th> Score du joueur </th></tr>' ;
+		
 		for (let e of reponseRequete){
-			lignes += '<tr><td>' + e.pseudo + '</td><td>' + e.score + '</td></tr>\n';  
+			table += '<tr><td>' + e.pseudo + '</td><td>' + e.score + '</td></tr>';  
 		}
+		table += "</tbody>"
 	}
-	document.getElementById(idBodyTable).innerHTML = lignes;
+	
+	document.getElementById(idBodyTable).innerHTML = table;
+	
+	
+	
