@@ -10,4 +10,4 @@ BEGIN
 END
 
 -------------------------------------------------------------------------------------------------
-CREATE SERVICE "recupMot" TYPE 'JSON' AUTHORIZATION OFF USER "DBA" URL ON METHODS 'GET' AS call DBA.proc_recupMot(ln = languesIdIn);
+CREATE SERVICE "recupMot" TYPE 'JSON' AUTHORIZATION OFF USER "DBA" URL ON METHODS 'GET' AS call DBA.proc_recupMot(ln = :languesIdIn);
