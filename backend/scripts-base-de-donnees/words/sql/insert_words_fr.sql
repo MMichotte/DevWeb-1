@@ -183,7 +183,6 @@ VALUES
 ('fr', 'environ'),
 ('fr', 'periode'),
 ('fr', 'regard'),
-('fr', 'different'),
 ('fr', 'utilisation'),
 ('fr', 'reponse'),
 ('fr', 'presents');
