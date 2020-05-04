@@ -1,4 +1,3 @@
-
 let inscriptionForm;
 
 document.addEventListener('DOMContentLoaded', function (){
@@ -11,3 +10,4 @@ function submitInscriptionForm(event) {
     let form = this;                         
     ajoutUtilisateur(form.nom.value,form.prenom.value,form.pseudo.value,form.pwd.value);
 }
+

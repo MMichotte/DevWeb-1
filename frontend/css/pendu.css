@@ -39,7 +39,8 @@ height : 50px;
 	transition:0.5s;
 }
 
-#style_banner a{
+#style_banner a,
+#style_banner span{
 	display: block;
 	line-height: 46px;
   text-align: center;
@@ -51,7 +52,8 @@ height : 50px;
 
 }
 
-#color_banner a:hover{
+#color_banner a:hover,
+#color_banner span:hover{
 	background: rgba(255,255,255,0.1);
 	border-bottom: solid 4px rgba(255,255,255,0.8);
 	color : #373737;
@@ -59,7 +61,8 @@ height : 50px;
 	transition : text-shadow,color 1s;
 }
 
-#color_banner a::before{
+#color_banner a::before,
+#color_banner span::before{
   content: '';
   position: absolute;
   left: 50%;
@@ -72,7 +75,8 @@ height : 50px;
   border-top: 5px solid rgba(0,0,0,0.2);
 }
 
-#style_banner a:hover::before{
+#style_banner a:hover::before,
+#style_banner span:hover::before{
 	border-color: rgba(255, 255, 255, 0.5) transparent transparent;
 	box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
 	transition:1s
