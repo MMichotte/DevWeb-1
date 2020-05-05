@@ -1,3 +1,4 @@
+
 <!doctype HTML>
 <html>
 
@@ -21,8 +22,10 @@
     <script src="classement.js"></script>
 
     <script src='js/connexion.js'></script>
-  
+
     <script src='js/MMichotte-traitement-ajouterUtilisateur.js'></script>
+    <script language="Javascript" src="js/GBrogniet-traitement-recupMot.js"></script>
+
     <script src='js/inscription.js'></script>
 
     <script type="text/javascript" language="javascript">
@@ -34,7 +37,7 @@
   <!-- Cors de la page -->
 
   <body>
-   
+
     <!-- Section de la bannière avec les liens de connexions et de About us -->
 
     <section id="color_banner">
@@ -62,12 +65,12 @@
           <!--surround the select box with a "custom-select" DIV element. Remember to set the width:-->
           <h1>Choose your language for the game</h1>
           <div class="lang_choices">
-             <select name="language" id="language">
-                <option selected disabled>Choose your language</option>
-                <option value="fr">Français</option>
-                <option value="en">English</option>
-                <option value="nl">Nederlands</option>
-             </select>
+            <select name="langue" id="motLangues" onchange= 'return getMot(this);' >
+                <option value="">--Choississez une langue--</option>
+                <option value="fr">français</option>
+                <option value="en">anglais</option>
+                <option value="de">allemand</option>
+            </select>
           </div>
         </div>
     </section>
@@ -114,8 +117,8 @@
       </div>
 
       <div class="div" id="mot_en_cours">
-        <p>Voici le mot en cours</p>
-        <p id="emplacement_mot"> <strong> Mot en cours </strong></p>
+        <p type=hidden id="motChoix"></p>
+        <p id="solution"></p>
 
       <p> Score actuel : <strong>0/10</strong></p>
       <input id="score" type="button" value="Débuter" onclick="startGame()" >
@@ -207,11 +210,11 @@
 			</form>
 		</div>
 		<div id="pseudoVerification"></div>
-  
+
   </div>
 
 </div>
-  
+
 
 
 </body>
