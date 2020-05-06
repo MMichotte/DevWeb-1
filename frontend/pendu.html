@@ -17,14 +17,14 @@
     <link href='css/pendu.css' rel='stylesheet' type='text/css' />
     <link href='css/popup.css' rel='stylesheet' type='text/css' />
     <link rel="stylesheet" type = "text/css" href="css/form.css" />
-
+    <script language="Javascript" src="js/GBrogniet-traitement-recupMot.js"></script>
     <script src="js/pendu.js"></script>
     <script src="classement.js"></script>
 
     <script src='js/connexion.js'></script>
 
     <script src='js/MMichotte-traitement-ajouterUtilisateur.js'></script>
-    <script language="Javascript" src="js/GBrogniet-traitement-recupMot.js"></script>
+
 
     <script src='js/inscription.js'></script>
 
@@ -117,11 +117,11 @@
       </div>
 
       <div class="div" id="mot_en_cours">
-        <p type=hidden id="motChoix"></p>
+        <p id="motChoix"></p>
         <p id="solution"></p>
 
       <p> Score actuel : <strong>0/10</strong></p>
-      <input id="score" type="button" value="Débuter" onclick="startGame()" >
+      <input id="score" type="button" value="Débuter" onclick="debuter()" >
       <input id="ajoutscore" type="button" value="Ajouter le score" onclick="ajoutScore()">
       </div>
 

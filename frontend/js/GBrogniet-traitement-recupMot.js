@@ -1,3 +1,5 @@
+var motChoix;
+var solution;
 function getMot(select) {
 
     var selectElem = document.getElementById('motLangues');
@@ -23,15 +25,17 @@ function getMot(select) {
             para = `<b>Voici le mot qui a été choisis pour le jeux:</b> <i>${response[nombre].mot}</i>`;
 
             motChoix = response[nombre].mot;
-            para += ' | mot découpé en lettre: '
-            for( let i = 0; i < motChoix.length; i++){
-                para += `${motChoix[i]}  `
+
+            solution=[];
+
+            for (j=0; j < motChoix.length; j++){
+              solution.push("_");
             }
+
+            
           //  document.getElementById('motChoix').innerHTML=para;
 
-            caractererRepeat = '_ ';
-            solution = caractererRepeat.repeat(motChoix.length);
-            document.getElementById('solution').innerHTML=solution;
+          recuperer();
         };
     xhr.send();
     return false;

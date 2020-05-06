@@ -1,5 +1,25 @@
 // GESTION DU CLAVIER
 
+
+function arrayVersString(i){
+	let str="";
+	for (let a=0; a < i.length; a++) {
+    console.log(i[a]);
+		str+=i[a];
+		if (a != i.length-1) {
+			str+=" ";
+		}
+	}
+  console.log(str);
+  console.log(i);
+	return str;
+}
+
+function recuperer() {
+  document.getElementById("solution").innerHTML=arrayVersString(solution);
+
+}
+
 document.addEventListener('keydown', (event) => {
     const nomTouche = event.key;
     /*Partie qui verifie si la lettre s'y trouve*/
@@ -13,13 +33,43 @@ document.addEventListener('keydown', (event) => {
 
     /*Partie qui remplace le _ par la/les lettre(s)*/
     if(lettreTrouvee){
-        //console.log(motChoix.indexOf(nomTouche))
-        remplacement = solution.replace(solution[0], nomTouche);
-        document.getElementById('solution').innerHTML= remplacement;
+
+      for (k=0; k < motChoix.length; k++) {
+        console.log(lettreTrouvee);
+        if (motChoix[k] == nomTouche) {
+
+          solution[k] = nomTouche;
+          console.log("lettreTrouvee2");
         }
-    else{
-    }
+      }
+      /*  Test pour les erreurs
+      if (nomTouche != solution[k]) {
+        let nombreErreur=0;
+         nombreErreur += 1;
+         switch (nombreErreur) {
+           case 1 :
+           document.getElementById("image_pendu").src = "img_pendu/pendu1.png";
+           case 2 :
+           document.getElementById("image_pendu").src = "img_pendu/pendu2.png";
+           case 3 :
+           document.getElementById("image_pendu").src = "img_pendu/pendu3.png";
+           case 4 :
+           document.getElementById("image_pendu").src = "img_pendu/pendu4.png";
+         }
+         */
+
+
+      }
+
+
+        //console.log(motChoix.indexOf(nomTouche))
+
+        document.getElementById('solution').innerHTML=arrayVersString(solution);
+        document.getElementById('lettre_' + nomTouche.toLowerCase()).style.backgroundColor = '#666666';
+        }
+
   }, false);
+
 
 // GESTION des POPUPS
 
