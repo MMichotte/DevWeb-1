@@ -12,7 +12,7 @@ let clavier ="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 let nbreLettretrouvee = 0;
 let nbrMot = 1;
 let nbrMotMax = 10;
-
+let lettreTape="";
 
 
 // GESTION DU CLAVIER
@@ -38,7 +38,7 @@ function recuperer() {
 document.addEventListener('keydown', (event) => {
     const nomTouche = event.key;
     /*Partie qui verifie si la lettre s'y trouve*/
-    if(motChoix.includes(nomTouche)){
+    if(motChoix.includes(nomTouche) && !lettreTape.includes(nomTouche)){
         lettreTrouvee = true;
     }
     else{
@@ -57,19 +57,21 @@ document.addEventListener('keydown', (event) => {
           lettreDansMot = true;
           solution[k] = nomTouche;
           nbreLettretrouvee++;
+          lettreTape+=nomTouche;
         }
-        else {
-          nbreLettretrouvee=0; 
-        }
+
       }
       document.getElementById('solution').innerHTML=arrayVersString(solution);
       document.getElementById('lettre_' + nomTouche.toLowerCase()).style.backgroundColor = '#666666';
       if (nbreLettretrouvee==motChoixLongueur) {
-        alert("Vous avez trouvé le mot");
-        finDeMot();
+        document.getElementById('button_cache').style.display='block';
+
+
+        //finDeMot();
       }
     }
-    else {
+    else if (!lettreTape.includes(nomTouche)){
+
       //console.log(nombreErreur);
       //console.log("saluit");
       nombreErreur++;
@@ -88,7 +90,10 @@ document.addEventListener('keydown', (event) => {
   }, false);
 
 function finDeMot() {
+
+
   score += 1 - 0.25*nombreErreur;
+  lettreTape="";
   setScore(score);
 
   nombreErreur = 0;
@@ -100,13 +105,13 @@ function finDeMot() {
     document.getElementById("solution").innerHTML = "";
 
     // Faut afficher fin de Partie
-    alert("Fin de partie, merci d'avoir joué")
     nbrMot=1;
     setNbrMot(" ");
     score=0;
   }
 
   else {
+      document.getElementById("button_cache").style.display="none";
       recupMotAleatoire();
   }
   setScore(score);
@@ -117,6 +122,7 @@ function resetAll() {
   nbreLettretrouvee=0;
   nbrMot=1;
   score=0;
+  lettreTape="";
   setScore(0);
   setNbrMot(nbrMot);
   resetClavier();
@@ -135,6 +141,7 @@ function setScore(s) {
 function setNbrMot(m) {
   document.getElementById("nbrMot").innerHTML = m;
 }
+
 
 
 
