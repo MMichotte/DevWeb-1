@@ -63,7 +63,7 @@
       <div id="choix_langues">
 
           <!--surround the select box with a "custom-select" DIV element. Remember to set the width:-->
-          <h1>Choose your language for the game</h1>
+          <h1>Choississez votre langue :</h1>
           <div class="lang_choices">
             <select name="langue" id="motLangues" onchange= 'return getMot(this);' >
                 <option value="">--Choississez une langue--</option>
@@ -120,15 +120,14 @@
         <p id="motChoix"></p>
         <p id="solution"></p>
 
-      <p> Score actuel : <strong>0/10</strong></p>
-      <input id="score" type="button" value="Débuter" onclick="debuter()" >
-      <input id="ajoutscore" type="button" value="Ajouter le score" onclick="ajoutScore()">
+      <p> Le score est de : <span id="score"></span></p>
+      <p> Mot numéro : <span id="nbrMot"> </span></p>
       </div>
 
 
 
-      <div class="div" id="image_pendu">
-        <img src="img_pendu/pendu_defaut.png">
+      <div class="div" id="zone_image_pendu">
+        <img id="image_pendu" src="img/img_pendu/0.png">
       </div>
   </section>
 
@@ -162,7 +161,7 @@
         <div class="letters" id="lettre_u">U</div>
         <div class="letters" id="lettre_v">V</div>
         <div class="letters" id="lettre_w">W</div>
-        <div class="letters" id="lettre_w">X</div>
+        <div class="letters" id="lettre_x">X</div>
         <div class="letters" id="lettre_y">Y</div>
         <div class="letters" id="lettre_z">Z</div>
       </div>

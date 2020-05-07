@@ -284,7 +284,7 @@ th, td {
   padding-bottom:;
 }
 
-#image_pendu {
+#zone_image_pendu {
   width: 20%;
   float:right;
   margin-bottom: 10px;
@@ -294,7 +294,7 @@ th, td {
   border-radius: 15px;
   background-color: #EDEEEE;
 }
-#image_pendu img{
+#zone_image_pendu #image_pendu{
   height: 150px;
   margin: 3px;
   border-radius: 5px;
@@ -333,6 +333,10 @@ th, td {
   border: #333 1px solid;
   border-radius: 10px;
   color: white;
+}
+
+#score {
+  font-weight: bold;
 }
 
 

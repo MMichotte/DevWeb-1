@@ -1,5 +1,10 @@
 // VARIABLES POUR LE JEU
-
+let nombreErreur = 0;
+let score=0;
+let clavier ="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+let nbreLettretrouvee = 0;
+let nbrMot = 1;
+let nbrMotMax = 10;
 
 
 
@@ -20,7 +25,7 @@ function arrayVersString(i){
 
 function recuperer() {
   document.getElementById("solution").innerHTML=arrayVersString(solution);
-
+  setNbrMot(nbrMot);
 }
 
 document.addEventListener('keydown', (event) => {
@@ -37,25 +42,89 @@ document.addEventListener('keydown', (event) => {
     /*Partie qui remplace le _ par la/les lettre(s)*/
     if(lettreTrouvee){
 
+      let lettreDansMot = false;
       for (k=0; k < motChoix.length; k++) {
-        console.log(lettreTrouvee);
-        if (motChoix[k] == nomTouche) {
 
+  //      console.log(lettreTrouvee);
+        if (motChoix[k] == nomTouche) {
+          lettreDansMot = true;
           solution[k] = nomTouche;
-          console.log("lettreTrouvee2");
+          nbreLettretrouvee++;
         }
       }
       document.getElementById('solution').innerHTML=arrayVersString(solution);
       document.getElementById('lettre_' + nomTouche.toLowerCase()).style.backgroundColor = '#666666';
+      if (nbreLettretrouvee==motChoixLongueur) {
+        finDeMot();
       }
+    }
+    else {
+      //console.log(nombreErreur);
+      //console.log("saluit");
+      nombreErreur++;
+      //console.log(nombreErreur);
+      document.getElementById('image_pendu').src = "img/img_pendu/" + nombreErreur + ".png";
+      document.getElementById('lettre_' + nomTouche.toLowerCase()).style.backgroundColor = '#666666';
 
+      if (nombreErreur == 4) {
+        //Afficher message perdu, faire quelque chose qu'il a perdu
+        finDeMot();
+      }
+    }
 
         //console.log(motChoix.indexOf(nomTouche))
 
-
-
-
   }, false);
+
+function finDeMot() {
+  score += 1 - 0.25*nombreErreur;
+  setScore(score);
+
+  nombreErreur = 0;
+  nbreLettretrouvee=0;
+  document.getElementById('image_pendu').src = "img/img_pendu/" + nombreErreur + ".png";
+  resetClavier();
+  nbrMot++
+  if(nbrMot == nbrMotMax+1) {
+    document.getElementById("solution").innerHTML = "";
+
+    // Faut afficher fin de Partie
+    nbrMot=1;
+    setNbrMot(" ");
+    score=0;
+  }
+
+  else {
+      recupMotAleatoire();
+  }
+  setScore(score);
+}
+
+function resetAll() {
+  nombreErreur=0;
+  nbreLettretrouvee=0;
+  nbrMot=1;
+  score=0;
+  setScore(0);
+  setNbrMot(nbrMot);
+  resetClavier();
+
+}
+
+function resetClavier() {
+  for (c of clavier) {
+    document.getElementById('lettre_' + c.toLowerCase()).style.backgroundColor = "red";
+  }
+}
+
+function setScore(s) {
+  document.getElementById("score").innerHTML = s + "/" + nbrMotMax;
+}
+function setNbrMot(m) {
+  document.getElementById("nbrMot").innerHTML = m;
+}
+
+
 
 
 
@@ -64,6 +133,9 @@ document.addEventListener('keydown', (event) => {
 // GESTION des POPUPS
 
 document.addEventListener('DOMContentLoaded', function (){
+
+    setScore(0);
+
     let insModal = document.getElementById("inscriptionModal");
     let insBtn = document.getElementById("inscriptionBtn");
     let insClose = document.getElementById("insClose");
