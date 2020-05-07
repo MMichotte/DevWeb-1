@@ -58,10 +58,14 @@ document.addEventListener('keydown', (event) => {
           solution[k] = nomTouche;
           nbreLettretrouvee++;
         }
+        else {
+          nbreLettretrouvee=0; 
+        }
       }
       document.getElementById('solution').innerHTML=arrayVersString(solution);
       document.getElementById('lettre_' + nomTouche.toLowerCase()).style.backgroundColor = '#666666';
       if (nbreLettretrouvee==motChoixLongueur) {
+        alert("Vous avez trouvé le mot");
         finDeMot();
       }
     }
@@ -74,7 +78,7 @@ document.addEventListener('keydown', (event) => {
       document.getElementById('lettre_' + nomTouche.toLowerCase()).style.backgroundColor = '#666666';
 
       if (nombreErreur == 4) {
-        //Afficher message perdu, faire quelque chose qu'il a perdu
+        alert("Vous n'avez pas trouvé le mot : " + motChoix);
         finDeMot();
       }
     }
@@ -96,6 +100,7 @@ function finDeMot() {
     document.getElementById("solution").innerHTML = "";
 
     // Faut afficher fin de Partie
+    alert("Fin de partie, merci d'avoir joué")
     nbrMot=1;
     setNbrMot(" ");
     score=0;
@@ -120,7 +125,7 @@ function resetAll() {
 
 function resetClavier() {
   for (c of clavier) {
-    document.getElementById('lettre_' + c.toLowerCase()).style.backgroundColor = "red";
+    document.getElementById('lettre_' + c.toLowerCase()).style.backgroundColor = "#a0522d";
   }
 }
 
