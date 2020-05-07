@@ -13,6 +13,9 @@ let nbreLettretrouvee = 0;
 let nbrMot = 1;
 let nbrMotMax = 10;
 
+//Objet: contient les données utilsateur après la connexion
+let utilisateur;
+
 
 
 // GESTION DU CLAVIER

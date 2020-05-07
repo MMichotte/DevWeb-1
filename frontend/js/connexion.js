@@ -9,5 +9,5 @@ document.addEventListener('DOMContentLoaded', function (){
 function submitConnexionForm(event) {                         
     event.preventDefault();                               
     let form = this;                         
-    //ajoutUtilisateur(form.nom.value,form.prenom.value,form.pseudo.value,form.pwd.value);
+    connexionUser(form.username.value, form.password.value);
 }
