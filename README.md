@@ -1,5 +1,7 @@
 # Projet DevWeb : jeu du pendu
 
+Pour des informations plus précises et complétent, nous vous invitons à aller ce le wiki du projet : https://github.com/MMichotte/DevWeb-1/wiki
+
 # Présentation de l'équipe
   Pour la réalisation de ce projet, nous sommes un groupe de 4 personnes :
    - Martin Michotte
@@ -19,12 +21,11 @@
 
     - Une page de connexion/d'inscription qui nous permet de jouer et d'enregristrer notre score dans la base de donnée.
 
-    - Une page qui permet de rajouter des mots.
-
 # Fonctionnalités supplémentaires
 
     - Possibilité pour l'utilisateur de rajouter des mots via un fichier csv ou un fichier qui contient une liste de mot.
     - Possibilité de rajouter une langue dans la base de données. 
+    - Une page qui permet de rajouter des mots.
     
     
 # Implémentation : aprroche technique 
