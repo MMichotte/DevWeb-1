@@ -19,8 +19,6 @@
 
     - Une page de connexion/d'inscription qui nous permet de jouer et d'enregristrer notre score dans la base de donnée.
 
-    - Une page qui permet de rajouter des mots.
-
 # Fonctionnalités supplémentaires
 
     - Possibilité pour l'utilisateur de rajouter des mots via un fichier csv ou un fichier qui contient une liste de mot.
