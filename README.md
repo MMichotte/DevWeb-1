@@ -25,6 +25,7 @@
 
     - Possibilité pour l'utilisateur de rajouter des mots via un fichier csv ou un fichier qui contient une liste de mot.
     - Possibilité de rajouter une langue dans la base de données. 
+    - Une page qui permet de rajouter des mots.
     
     
 # Implémentation : aprroche technique 
