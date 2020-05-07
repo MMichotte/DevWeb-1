@@ -1,5 +1,7 @@
 # Projet DevWeb : jeu du pendu
 
+Pour des informations plus précises et complétent, nous vous invitons à aller ce le wiki du projet : 
+
 # Présentation de l'équipe
   Pour la réalisation de ce projet, nous sommes un groupe de 4 personnes :
    - Martin Michotte
