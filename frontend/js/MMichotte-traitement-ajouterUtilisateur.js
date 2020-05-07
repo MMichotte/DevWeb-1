@@ -14,7 +14,8 @@ function ajoutUtilisateur(nom,prenom,pseudo,mdp){
             if (request.status == 201){
                 document.getElementById("pseudoExisteDejaErreur").style.display= "none";
                 document.getElementById("submitBtn").style.backgroundColor= "green";
-                window.location.assign("http://127.0.0.1:8080/pendu");
+                alert("Profile créé! Connectez-vous pour jouer.")
+                closPopUps();
             }
             else if (request.status == 400){
                 document.getElementById("pseudoInput").style.color= "red";

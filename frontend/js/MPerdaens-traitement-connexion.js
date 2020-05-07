@@ -1,18 +1,4 @@
-/* ***** actions au chargement de la page ***** */
-/*document.addEventListener('DOMContentLoaded', initPage);                  
-function initPage() {
-    let formulaireVendeur = document.getElementById("formulaireconnexion");
-    formulaireVendeur.addEventListener("submit", soumettreRequete);        
-}
-
-
-/* ***** actions à la soumission du formulaire ***** */
-/*function soumettreRequete(event) {                         
-    event.preventDefault();                               
-
-    let formulaire = this;                                
-    envoyerRequete(formulaire.username.value, formulaire.password.value);
-}*/
+// auteur : Perdaens Martin
 
 /* ***** appel ajax ***** */
 function connexionUser(pseudoIn, mdpIn) {
@@ -20,15 +6,19 @@ function connexionUser(pseudoIn, mdpIn) {
     xhr.open('get', "http://localhost:8080/connexion?pseudo=" + pseudoIn + "&mdp="+ mdpIn, true);    
     xhr.onload =                                                                                
         function traiterReponse() { 
-            let reponse = JSON.parse(xhr.responseText);
-
+            let reponse = JSON.parse(xhr.responseText)[0];
             if(reponse.userId == -1){
                 document.querySelector("#pseudoVerification").innerHTML = `<p id="etatPseudo"> Connexion impossible vous avez rentrer de mauvaises informations </p>`;
                 document.getElementById('etatPseudo').style.color = 'red';
             }
             else{
                 utilisateur = reponse
-                console.log(utilisateur)
+                //CE COMMENTAIRE DOIT ETRE SUPPRIME
+                document.getElementById("li_dec").style.display = "table-cell";
+                document.getElementById("li_con").style.display = "none";
+                document.getElementById("li_ins").style.display = "none";
+                document.getElementById("bonjourUser").innerHTML = "Bonjour " + utilisateur.prenom +" !";
+                closPopUps(); 
             }
         };
     xhr.send();
