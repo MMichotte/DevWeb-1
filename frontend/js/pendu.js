@@ -1,6 +1,9 @@
+// VARIABLES POUR LE JEU
+
+
+
+
 // GESTION DU CLAVIER
-
-
 function arrayVersString(i){
 	let str="";
 	for (let a=0; a < i.length; a++) {
@@ -42,33 +45,20 @@ document.addEventListener('keydown', (event) => {
           console.log("lettreTrouvee2");
         }
       }
-      /*  Test pour les erreurs
-      if (nomTouche != solution[k]) {
-        let nombreErreur=0;
-         nombreErreur += 1;
-         switch (nombreErreur) {
-           case 1 :
-           document.getElementById("image_pendu").src = "img_pendu/pendu1.png";
-           case 2 :
-           document.getElementById("image_pendu").src = "img_pendu/pendu2.png";
-           case 3 :
-           document.getElementById("image_pendu").src = "img_pendu/pendu3.png";
-           case 4 :
-           document.getElementById("image_pendu").src = "img_pendu/pendu4.png";
-         }
-         */
-
-
+      document.getElementById('solution').innerHTML=arrayVersString(solution);
+      document.getElementById('lettre_' + nomTouche.toLowerCase()).style.backgroundColor = '#666666';
       }
 
 
         //console.log(motChoix.indexOf(nomTouche))
 
-        document.getElementById('solution').innerHTML=arrayVersString(solution);
-        document.getElementById('lettre_' + nomTouche.toLowerCase()).style.backgroundColor = '#666666';
-        }
+
+
 
   }, false);
+
+
+
 
 
 // GESTION des POPUPS
