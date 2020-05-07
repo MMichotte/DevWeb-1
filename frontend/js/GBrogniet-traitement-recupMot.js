@@ -1,3 +1,9 @@
+/* Auteur :
+
+    Brogniet Geoffrey
+
+*/
+
 let motChoix;
 let solution;
 let listeMots;

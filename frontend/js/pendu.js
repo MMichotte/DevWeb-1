@@ -1,3 +1,10 @@
+/* Auteurs :
+
+  Martin Michotte
+  Brogniet Geoffrey
+  Martin Pardeans
+*/
+
 // VARIABLES POUR LE JEU
 let nombreErreur = 0;
 let score=0;
