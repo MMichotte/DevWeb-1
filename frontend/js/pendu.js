@@ -69,7 +69,7 @@ document.addEventListener('keydown', (event) => {
       }
     }
   }
-  
+
 }, false);
 
 
@@ -81,12 +81,12 @@ function finDeMot() {
   nbreLettretrouvee=0;
   resetClavier();
   document.getElementById('image_pendu').src = "img/img_pendu/" + nombreErreur + ".png";
-  
+
   nbrMot++
   if(nbrMot == nbrMotMax+1) {
     document.getElementById("solution").innerHTML = "";
 
-    // Faut afficher fin de Partie
+    alert("Vous êtes arrivé à la fin de la partie.<br> Votre score est de: " + score);
     nbrMot=1;
     setNbrMot(" ");
     score=0;
