@@ -18,8 +18,7 @@ function getMot(select) {
     }
     else{
       resetAll();
-    
-      //let url = `http://192.168.0.15:8080/recupMot?`; //A SUPPRIMER
+
       let url = `http://localhost:8080/recupMot?`;
       let params = `languesIdIn=${select.options[index].value}`
       let request = url + params;
