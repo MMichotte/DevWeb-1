@@ -15,6 +15,7 @@ let nbrMotMax = 10;
 let lettreTape="";
 let isInPopup = false;
 let nbrErreurMax = 9;
+let nombreDivision = 10;
 
 let utilisateur = null; //Objet: contient les données utilsateur après la connexion
 
@@ -81,7 +82,7 @@ document.addEventListener('keydown', (event) => {
 
 
 function finDeMot() {
-  score += 1 - ((nombreErreur/nbrErreurMax).toFixed(1));
+  score += 1 - ((nombreErreur/nombreDivision).toFixed(1));
   lettreTape="";
   nombreErreur = 0;
   nbreLettretrouvee=0;
