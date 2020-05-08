@@ -40,15 +40,17 @@ document.addEventListener('keydown', (event) => {
 
   if(!isInPopup){
     const nomTouche = event.key;
+		console.log(lettreTape);
+		console.log(nomTouche);
+		console.log(!lettreTape.includes(nomTouche));
+
     /*Partie qui verifie si la lettre s'y trouve*/
     if(motChoix.includes(nomTouche) && !lettreTape.includes(nomTouche)){
-      let lettreDansMot = false;
       for (k=0; k < motChoix.length; k++) {
         if (motChoix[k] == nomTouche) {
           lettreDansMot = true;
           solution[k] = nomTouche;
           nbreLettretrouvee++;
-          lettreTape+=nomTouche;
         }
 
       }
@@ -60,15 +62,20 @@ document.addEventListener('keydown', (event) => {
       }
     }
     else if (!lettreTape.includes(nomTouche)){
+
       nombreErreur++;
       document.getElementById('image_pendu').src = "img/img_pendu/" + nombreErreur + ".png";
       document.getElementById('lettre_' + nomTouche.toLowerCase()).style.backgroundColor = '#666666';
 
       if (nombreErreur == nbrErreurMax) {
-        alert("Vous n'avez pas trouvé le mot : " + motChoix);
-        finDeMot();
+				document.getElementById('button_cache').style.display='block';
+
+        //alert("Vous n'avez pas trouvé le mot : " + motChoix);
+        //finDeMot();
       }
     }
+		lettreTape+=nomTouche;
+
   }
 
 }, false);
@@ -76,7 +83,7 @@ document.addEventListener('keydown', (event) => {
 
 
 function finDeMot() {
-  score += 1 - 0.25*nombreErreur;
+  score += 1 - ((nombreErreur/nbrErreurMax).toFixed(1));
   lettreTape="";
   nombreErreur = 0;
   nbreLettretrouvee=0;
@@ -87,7 +94,7 @@ function finDeMot() {
   if(nbrMot == nbrMotMax+1) {
     document.getElementById("solution").innerHTML = "";
 
-    alert("Vous êtes arrivé à la fin de la partie.<br> Votre score est de: " + score);
+    alert("Vous êtes arrivé à la fin de la partie. Votre score est de: " + score);
     nbrMot=1;
     setNbrMot(" ");
     score=0;
