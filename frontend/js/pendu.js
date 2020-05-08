@@ -40,9 +40,7 @@ document.addEventListener('keydown', (event) => {
 
   if(!isInPopup){
     const nomTouche = event.key;
-		console.log(lettreTape);
-		console.log(nomTouche);
-		console.log(!lettreTape.includes(nomTouche));
+
 
     /*Partie qui verifie si la lettre s'y trouve*/
     if(motChoix.includes(nomTouche) && !lettreTape.includes(nomTouche)){
