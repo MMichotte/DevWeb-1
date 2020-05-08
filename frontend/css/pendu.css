@@ -70,26 +70,8 @@ height : 50px;
 	transition : text-shadow,color 1s;
 }
 
-#color_banner a::before,
-#color_banner span::before{
-  content: '';
-  position: absolute;
-  left: 50%;
-  bottom: 5px;
-	transition:1s;
-	width: 0;
-	height: 0;
-	border-left: 3px solid transparent;
-  border-right: 3px solid transparent;
-  border-top: 5px solid rgba(0,0,0,0.2);
-}
 
-#style_banner a:hover::before,
-#style_banner span:hover::before{
-	border-color: rgba(255, 255, 255, 0.5) transparent transparent;
-	box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
-	transition:1s
-}
+
 
 /* ----------------------------------------------------------------- */
 
@@ -350,5 +332,3 @@ th, td {
   margin-left: 90px;
 
 }
-
-
