@@ -14,6 +14,7 @@ let nbrMot = 1;
 let nbrMotMax = 10;
 let lettreTape="";
 let isInPopup = false;
+let nbrErreurMax = 9;
 
 let utilisateur = null; //Objet: contient les données utilsateur après la connexion
 
@@ -63,7 +64,7 @@ document.addEventListener('keydown', (event) => {
       document.getElementById('image_pendu').src = "img/img_pendu/" + nombreErreur + ".png";
       document.getElementById('lettre_' + nomTouche.toLowerCase()).style.backgroundColor = '#666666';
 
-      if (nombreErreur == 4) {
+      if (nombreErreur == nbrErreurMax) {
         alert("Vous n'avez pas trouvé le mot : " + motChoix);
         finDeMot();
       }

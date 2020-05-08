@@ -288,7 +288,7 @@ th, td {
 
 #zone_image_pendu {
   width: 16%;
-  height: 160px;
+  height: 180px;
   float:right;
   margin-bottom: 10px;
   margin-left: 0px;
@@ -298,8 +298,8 @@ th, td {
   background-color: #EDEEEE;
 }
 #zone_image_pendu #image_pendu{
-  height: 120px;
-  margin: 15px;
+  height: 95%;
+  margin: 5px;
   border-radius: 5px;
 }
 
