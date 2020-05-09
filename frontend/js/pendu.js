@@ -6,6 +6,7 @@
 */
 
 // VARIABLES POUR LE JEU
+let attendreAction = false;
 let nombreErreur = 0;
 let score=0;
 let clavier ="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -15,10 +16,10 @@ let nbrMotMax = 10;
 let lettreTape="";
 let isInPopup = false;
 let nbrErreurMax = 9;
-let nombreDivision = 10;
+let nombreDivision = 9;
+let nomTouche='';
 
 let utilisateur = null; //Objet: contient les données utilsateur après la connexion
-
 
 // GESTION DU CLAVIER
 function arrayVersString(i){
@@ -38,9 +39,11 @@ function recuperer() {
 }
 
 document.addEventListener('keydown', (event) => {
+   nomTouche = event.key;
+   let nomToucheUpper = nomTouche.toUpperCase();
+   let lettreOk = clavier.includes(nomToucheUpper);
+  if(!isInPopup && !attendreAction && lettreOk){
 
-  if(!isInPopup){
-    const nomTouche = event.key;
 
 
     /*Partie qui verifie si la lettre s'y trouve*/
@@ -58,6 +61,7 @@ document.addEventListener('keydown', (event) => {
       if (nbreLettretrouvee==motChoixLongueur) {
         //le mot complet à été trouvé !
         document.getElementById('button_cache').style.display='block';
+        attendreAction = true;
       }
     }
     else if (!lettreTape.includes(nomTouche)){
@@ -68,7 +72,7 @@ document.addEventListener('keydown', (event) => {
 
       if (nombreErreur == nbrErreurMax) {
 				document.getElementById('button_cache').style.display='block';
-
+                attendreAction = true;
         //alert("Vous n'avez pas trouvé le mot : " + motChoix);
         //finDeMot();
       }
@@ -82,17 +86,20 @@ document.addEventListener('keydown', (event) => {
 
 
 function finDeMot() {
-  score += 1 - ((nombreErreur/nombreDivision).toFixed(1));
+  score += 1 - (nombreErreur/nombreDivision);
+  score = parseFloat(score.toFixed(2));
   lettreTape="";
   nombreErreur = 0;
   nbreLettretrouvee=0;
   resetClavier();
   document.getElementById('image_pendu').src = "img/img_pendu/" + nombreErreur + ".png";
-
+  attendreAction = false;
   nbrMot++
   if(nbrMot == nbrMotMax+1) {
     document.getElementById("solution").innerHTML = "";
 
+   incrementerScore(utilisateur.userId, score);
+   recupClassement()
     alert("Vous êtes arrivé à la fin de la partie. Votre score est de: " + score);
     nbrMot=1;
     setNbrMot(" ");
@@ -103,6 +110,7 @@ function finDeMot() {
       recupMotAleatoire();
   }
   setScore(score);
+
 }
 
 function resetAll() {
@@ -150,7 +158,8 @@ let insModal, insBtn, insClose, conModal, conBtn, conClose
 document.addEventListener('DOMContentLoaded', function (){
 
     setScore(0);
-
+    recupClassement();
+    
     insModal = document.getElementById("inscriptionModal");
     insBtn = document.getElementById("inscriptionBtn");
     insClose = document.getElementById("insClose");

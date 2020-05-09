@@ -23,7 +23,7 @@ CREATE TABLE `utilisateurs` (
 
 CREATE TABLE `classement` (
     `userId` int  NOT NULL ,
-    `score` int  NOT NULL ,
+    `score` double  NOT NULL ,
     PRIMARY KEY (`userId`),
     CONSTRAINT `fk_classement_userId` FOREIGN KEY(`userId`) REFERENCES `utilisateurs` (`userId`)
 );

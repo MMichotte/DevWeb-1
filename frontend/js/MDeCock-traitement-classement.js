@@ -2,10 +2,11 @@
 	
 	/*auteur: maxime de cock HE201554 */
 
-	if (finDeMot()) {
+
+	function recupClassement() {
 		let xhr = new XMLHttpRequest();
 
-		xhr.open('get', 'classement', true);
+		xhr.open('get', 'http://localhost:8080/classement', true);
 		xhr.onload =
 			function () {
 				let table_jeu = 'table_jeu';
@@ -24,10 +25,4 @@ function creerTable(reponseRequete, idBodyTable) {
 			table += "</tbody>";
 			document.getElementById(idBodyTable).innerHTML = table ;
 		}
-	}
-	console.log(incrementerScore());
 
- function incrementerScore(id, score){
-
-
-}
