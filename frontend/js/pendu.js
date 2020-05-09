@@ -159,7 +159,7 @@ document.addEventListener('DOMContentLoaded', function (){
 
     setScore(0);
     recupClassement();
-    
+
     insModal = document.getElementById("inscriptionModal");
     insBtn = document.getElementById("inscriptionBtn");
     insClose = document.getElementById("insClose");
