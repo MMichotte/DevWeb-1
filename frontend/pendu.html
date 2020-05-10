@@ -60,10 +60,12 @@
     <!-- Section de zone de jeu (classement, mot en cours et image) -->
     <section id="zone_jeu">
 
+      <div class="div" id="zone_image_pendu">
+        <img id="image_pendu" src="img/img_pendu/0.png">
+      </div>
+
       <div id="c1">
-        <div class="lang_regle" id="lang_regle">
           <!-- Div choix de langues -->
-          <div id="choix_langues">
             <!--surround the select box with a "custom-select" DIV element. Remember to set the width:-->
             <div class="lang_choices">
               <select name="langue" id="motLangues" onchange= 'return getMot(this);' >
@@ -73,8 +75,7 @@
                   <option value="de">allemand</option>
               </select>
             </div>
-          </div>
-        </div>
+    
 
         <div class="div" id="mot_en_cours">
           <p id="motChoix"></p>
@@ -85,9 +86,6 @@
         </div>
       </div>
 
-      <div class="div" id="zone_image_pendu">
-        <img id="image_pendu" src="img/img_pendu/0.png">
-      </div>
 
       <div class="div" id="tableau_classement">
         <h2> Classement des joueurs </h2>
