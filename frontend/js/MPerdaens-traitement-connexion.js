@@ -13,7 +13,6 @@ function connexionUser(pseudoIn, mdpIn) {
             }
             else{
                 utilisateur = reponse
-                //CE COMMENTAIRE DOIT ETRE SUPPRIME
                 document.getElementById("li_dec").style.display = "table-cell";
                 document.getElementById("li_con").style.display = "none";
                 document.getElementById("li_ins").style.display = "none";
