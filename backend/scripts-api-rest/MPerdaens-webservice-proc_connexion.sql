@@ -1,3 +1,5 @@
+/* auteur : Perdaens Martin HE303159 */
+
 CREATE PROCEDURE "dba"."proc_connexion"(in pseudoIn VARCHAR(50), in mdpIn VARCHAR(100))
 
 RESULT(userId int, nom VARCHAR(50), prenom VARCHAR(50), pseudo varchar(50))
