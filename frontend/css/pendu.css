@@ -4,9 +4,11 @@
 
 /* Style du body */
 body {
-  width: 90%;
+  display:flex;
+  flex-direction: column;
+  width: 97%;
   background-color: wheat;
-  margin-left: 50px;
+
 }
 
 
@@ -14,6 +16,7 @@ body {
 /* Style de la bannière */
 
 #style_banner{
+display:flex;
 width: 100%;
 background: linear-gradient(#8B4513, #A0522D);
 border-radius: 0px 0px 4px 4px;
@@ -25,6 +28,7 @@ height : 50px;
 }
 
 #color-banner{
+  display:flex;
 	font-family: "Trebuchet MS";
   display: table;
 	margin-right : auto;
@@ -34,7 +38,7 @@ height : 50px;
 }
 
 #color_banner li{
-  display: table-cell;
+  display: flex;
 	width: 180px;
 	transition:1s;
 }
@@ -45,12 +49,12 @@ height : 50px;
 }
 
 #color_banner #li_dec {
-  display: none;
+  display: flex;
 }
 
 #style_banner a,
 #style_banner span{
-	display: block;
+	display: flex;
 	line-height: 46px;
   text-align: center;
 	text-decoration : none;
@@ -80,12 +84,19 @@ height : 50px;
 .titre_jeu {
   width: 40%;
   height: 60px;
+  display: flex;
   background-color: none;
   margin-top: 20px;
 
-  margin-left: 400px;
+  margin-left: 500px;
 
   text-align: center;
+}
+
+#style_titre {
+  position: absolute;
+  top:17%; left:50%;
+  transform: translate(-50%, -50%);
 }
 
 #style_titre h1 {
@@ -132,7 +143,10 @@ select {
 }
 
 .lang_choices {
-   position: relative;
+  position: absolute;
+  top:26%; left:8%;
+  transform: translate(-30%, -50%);
+
    display: flex;
    width: 16em;
    height: 3em;
@@ -193,9 +207,14 @@ select {
 /* Style de section jeu */
 
 .zone_jeu{
-  display: inline-block;
+  display: flex;
+  justify-content: space-between;
+  justify-content: space-around;
   width: 100%;
   margin-top: 50px;
+  position: absolute;
+  top:44%; left:47%;
+  transform: translate(-50%, -30%);
 }
 .div{
   width: 200px;
@@ -205,13 +224,11 @@ select {
 
 
 #tableau_classement {
-  float:left;
-  width: 33%;
-  height: 158px;
-  margin-bottom: 15px;
-  padding : 10px;
-  margin-left: 0px;
-  margin-right: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 20%;
+  height: 300px;
   border: 5px solid black;
   border-radius: 15px;
   background-color: #EDEEEE;
@@ -253,11 +270,6 @@ th, td {
   float:left;
   width: 18%;
   padding-bottom: 40px;
-  padding-top: 0px;
-  margin-top: 0px;
-  margin-bottom: 50px;
-  margin-left: 100px;
-  margin-right: 0px;
   background-color: #EDEEEE;
   height: 135px;
   border: 4px solid black;
@@ -269,27 +281,40 @@ th, td {
 }
 
 #zone_image_pendu {
-  width: 16%;
-  height: 180px;
-  float:right;
-  margin-bottom: 10px;
-  margin-left: 0px;
-  margin-right: 100px;
+  width:auto;
+  height: 300px;
+
+  display: flex;
+  flex-shrink:4;
+  justify-content: flex-end;
+
   border: 4px solid black;
   border-radius: 15px;
   background-color: #EDEEEE;
 }
 #zone_image_pendu #image_pendu{
-  height: 95%;
+
+  flex-shrink: 3;
+  height: auto;
+  max-height: 90%;
   margin: 5px;
-  border-radius: 5px;
+
 }
 
+
+
 .zone_clavier {
-  width: 800px;
-  float: left;
-  text-align: center;
-  height: 110px;
+  position: absolute;
+  top:84%; left:36.5%;
+  transform: translate(-50%, -50%);
+  display:flex;
+  flex-basis: auto;
+  flex-shrink: 5;
+  justify-content: space-around;
+  width: auto;
+  max-width: 800px;
+
+
   margin-left: 260px;
   padding-top: 20px;
 
@@ -303,12 +328,16 @@ th, td {
 }
 
 .apercu_clavier {
+
   height: 140px;
   padding-left: 74px;
   width: 750px;
 }
 
 .letters {
+  display:flex;
+  justify-content: center;
+  flex-shrink: 3;
   float: left;
   margin: 4px;
   text-align: center;
