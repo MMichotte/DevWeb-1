@@ -36,3 +36,6 @@ BEGIN
 
 
 END
+-----------------------------------------------------------------------------
+
+CREATE SERVICE "majScore" TYPE 'JSON' AUTHORIZATION OFF USER "DBA" URL ON METHODS 'GET' AS call DBA.proc_majScore(idin= :idin,  scorein= :scorein)
