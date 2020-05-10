@@ -11,7 +11,14 @@ body {
 
 }
 
+/* Style du bouton suivant */
 
+}
+#button_cache {
+
+display: flex;
+justify-content: center;
+}
 
 /* Style de la bannière */
 
@@ -266,6 +273,8 @@ th, td {
 }
 
 #mot_en_cours {
+
+
   font-size: 20px;
   float:left;
   width: 18%;
@@ -279,6 +288,13 @@ th, td {
 #mot_en_cours p {
   text-align: center;
 }
+
+#button_cache {
+  border-radius: 10px;
+  border:  1px solid black;
+
+}
+
 
 #zone_image_pendu {
   width:auto;
