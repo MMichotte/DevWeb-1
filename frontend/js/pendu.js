@@ -145,7 +145,10 @@ function finDeMot() {
 }
 
 
-// Maxime
+/* fonction qui permet de remettre
+ *  toutes les valeurs à leur valeur initiale
+ */
+
 function resetAll() {
   nombreErreur=0;
   nbreLettretrouvee=0;

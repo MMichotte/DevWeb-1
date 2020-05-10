@@ -28,11 +28,11 @@ function getMot(select) {
     else{
       resetAll();
 
-      let url = `http://localhost:8080/recupMot?`;
+
       let params = `languesIdIn=${select.options[index].value}`
-      let request = url + params;
       let xhr = new XMLHttpRequest();
-      xhr.open('get',request, true);
+
+      xhr.open('get','/recupMot?'+params, true)
         xhr.onload =
           function recupMot() {;
               listeMots = JSON.parse(xhr.responseText);
@@ -49,7 +49,7 @@ function getMot(select) {
  * aléatoire créé et par rapport au temps de réponse de la requête.
  *
  * Cette fonction va faire appel à la fonction récupérer() qui se trouve dans
- * pendu.js 
+ *  pendu.js
  *
  */
 

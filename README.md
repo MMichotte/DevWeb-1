@@ -4,10 +4,10 @@ localhost:8080/pendu
 
 # Présentation de l'équipe
   Pour la réalisation de ce projet, nous sommes un groupe de 4 personnes :
-   - Martin Michotte
-   - Martin Perdeans
-   - Geoffrey Brogniet
-   - Maxime de Cock 
+   - Martin Michotte - HE302955
+   - Martin Perdeans - HE303159
+   - Geoffrey Brogniet - HE201652
+   - Maxime de Cock - HE201554
 # Besoin du client
 
   Nous désirons une page web qui permet de jouer au fameux jeu du Pendu. Le but serait de pouvoir taper via le clavier les lettres du mots, de voir au fur et à mesure des fautes le bonhomme se faire pendre mais aussi d'avoir un classement des joueurs avec les scores.
@@ -66,14 +66,14 @@ Nous avons divisé notre réalisation en deux grandes catégories, le back-end q
                                                                         
 ## Structure de la Base de Données : 
  Notre base de données composé de 4 tables qui sont liées deux à deux.<br/>
-       1. table utilisateurs<br/>
-       2. table classement<br/>
-       3. table mots<br/>
-       4. table langues<br/>
+       1. table utilisateurs - cette tabble sert pour stocker différentes informations qu'un joueur fournit <br/>
+       2. table classement - cette table permet de sauvegarder le meilleur score d'un joueur<br/>
+       3. table mots - cette table contient l'ensemble des mots dans les différentes langues disponible dans le jeux<br/>
+       4. table langues - cette table permet d'indiquer la correspondance entre un acronyme et le nom complet de la langue<br/>
        
  1. La **table utilisateurs** est composé de 5 champs: *userId*, *nom*, *prenom*, *pseudo*, *mdp*.
  2. La **table classement** est composé de 2 champs: *userId*, *score*.<br/>
  Ces deux tables sont liées grâce au champ *userId* qui se trouve réspéctivement dans chacune des deux tables (cfr: image).
- 3. La **table mots** est composé de 2 champs: *languesId*, *mot*.
- 4. La **table langues** est composé de 2 champs: *languesId*, *nom*.<br/>
+ 3. La **table mots** est composé de 2 champs: *languesId (valeur possible: en, fr, de)*, *mot*.
+ 4. La **table langues** est composé de 2 champs: *languesId (valeur possible: en, fr, de)*, *nom (valeur possible: anglais, français, allemand)*.<br/>
  Ces deux tables sont liées grâce au champ *languesId* qui se trouve réspéctivement dans chacune des deux tables (cfr: image).
