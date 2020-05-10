@@ -65,11 +65,11 @@ Nous avons divisé notre réalisation en deux grandes catégories, le back-end q
 <img src="frontend/img/tableImg.png" alt="Image de la table de données" />
                                                                         
 ## Structure de la Base de Données : 
- Notre base de données composé de 4 tables qui sont liées deux à deux.
-       1. table utilisateurs
-       2. table classement
-       3. table mots
-       4. table langues
+ Notre base de données composé de 4 tables qui sont liées deux à deux.<br/>
+       1. table utilisateurs<br/>
+       2. table classement<br/>
+       3. table mots<br/>
+       4. table langues<br/>
        
  1. La **table utilisateurs** est composé de 5 champs: *userId*, *nom*, *prenom*, *pseudo*, *mdp*.
  2. La **table classement** est composé de 2 champs: *userId*, *score*.<br/>
