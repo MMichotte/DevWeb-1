@@ -4,9 +4,9 @@ localhost:8080/pendu
 
 # Présentation de l'équipe
   Pour la réalisation de ce projet, nous sommes un groupe de 4 personnes :
-   - Martin Michotte
-   - Martin Perdeans
-   - Geoffrey Brogniet
+   - Martin Michotte - HE302955
+   - Martin Perdeans - HE303159
+   - Geoffrey Brogniet - HE201652
    - Maxime de Cock - HE201554
 # Besoin du client
 
