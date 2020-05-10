@@ -91,7 +91,11 @@ document.addEventListener('keydown', (event) => {
 }, false);
 
 
-// Michotte
+/**
+ * Fonction utilitaire permettant de rafraîchir les données 
+ * lors d'un changement de mots. 
+ * 
+ */
 function finDeMot() {
   score += 1 - (nombreErreur/nombreDivision);
   score = parseFloat(score.toFixed(2));
@@ -101,21 +105,22 @@ function finDeMot() {
   resetClavier();
   document.getElementById('image_pendu').src = "img/img_pendu/" + nombreErreur + ".png";
   attendreAction = false;
+
   nbrMot++
   if(nbrMot == nbrMotMax+1) {
+    incrementerScore(utilisateur.userId, score);
+    recupClassement()
     document.getElementById("solution").innerHTML = "";
-
-   incrementerScore(utilisateur.userId, score);
-   recupClassement()
     alert("Vous êtes arrivé à la fin de la partie. Votre score est de: " + score);
-    nbrMot=1;
-    setNbrMot(" ");
     score=0;
+    nbrMot=1;
+    setNbrMot("");
   }
   else {
       document.getElementById("button_cache").style.display="none";
       recupMotAleatoire();
   }
+
   setScore(score);
   document.getElementById('solution').style.color = 'black';
 }
@@ -144,7 +149,7 @@ function resetClavier() {
 
 /**
  * Cette fonction permet d'afficher à la fin de chaque mot le score actuel du joueur 
- * @param {int} s => fait référence au score du joueur après chaque mot
+ * @param {double} s => fait référence au score du joueur après chaque mot
  */
 function setScore(s) {
   document.getElementById("score").innerHTML = s + "/" + nbrMotMax;
@@ -159,7 +164,9 @@ function setNbrMot(m) {
 }
 
 
-// Michotte
+/**
+ * Fonction gérant la déconnexion d'un utilisateur.
+ */
 function deconnexion(){
   resetAll();
   document.getElementById('motLangues').selectedIndex = 0;
@@ -176,7 +183,6 @@ function deconnexion(){
 
 let insModal, insBtn, insClose, conModal, conBtn, conClose
 
-// Michotte
 document.addEventListener('DOMContentLoaded', function (){
 
     setScore(0);
@@ -186,13 +192,19 @@ document.addEventListener('DOMContentLoaded', function (){
     insBtn = document.getElementById("inscriptionBtn");
     insClose = document.getElementById("insClose");
 
-    // When the user clicks on the button, open the modal
+    /**
+     * Fonction faisant apparaître le popup d'inscription 
+     * lors de l'appui sur le bouton "inscription".
+     */
     insBtn.onclick = function() {
         insModal.style.display = "block";
         isInPopup = true;
     }
 
-    // When the user clicks on <span> (x), close the modal
+    /**
+     * Fonction faisant disparaître le popup d'inscription 
+     * lors de l'appui sur le "X".
+     */
     insClose.onclick = function() {
         closPopUps();
     }
@@ -201,19 +213,28 @@ document.addEventListener('DOMContentLoaded', function (){
     conBtn = document.getElementById("connexionBtn");
     conClose = document.getElementById("conClose");
 
-    // When the user clicks on the button, open the modal
+    /**
+     * Fonction faisant apparaître le popup de connexion 
+     * lors de l'appui sur le bouton "connexion".
+     */
     conBtn.onclick = function() {
         conModal.style.display = "block";
         isInPopup = true;
     }
 
-    // When the user clicks on <span> (x), close the modal
+    /**
+     * Fonction faisant disparaître le popup de connexion 
+     * lors de l'appui sur le "X".
+     */
     conClose.onclick = function() {
         closPopUps();
     }
 
 
-    // When the user clicks anywhere outside of the modal, close it
+    /**
+     * Fonction faisant disparaître tous les popups
+     * ouvert lors d'un click en dehors d'un popup.
+     */
     window.onclick = function(event) {
         if (event.target == insModal || event.target == conModal) {
           closPopUps();
@@ -222,7 +243,9 @@ document.addEventListener('DOMContentLoaded', function (){
 
 });
 
-// Michotte
+/**
+ * Fonction faisant disparaître tous les popups
+ */
 function closPopUps() {
   isInPopup = false;
   insModal.style.display = "none";

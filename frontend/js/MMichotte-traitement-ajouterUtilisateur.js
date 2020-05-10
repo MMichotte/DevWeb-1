@@ -1,5 +1,14 @@
 // auteur : Michotte Martin HE302955
 
+/**
+ * Fonction faisant appel à l'api afin d'inscrire un nouvel utilisateur
+ * dans la DB et traitant la réponse de celle-ci. 
+ * 
+ * @param {String} nom - le nom du nouvel utilisateur
+ * @param {String} prenom - le prenom du nouvel utilisateur
+ * @param {String} pseudo - le pseudo du nouvel utilisateur
+ * @param {String} mdp - le mot de passe du nouvel utilisateur
+ */
 function ajoutUtilisateur(nom,prenom,pseudo,mdp){
     xhr = new XMLHttpRequest();
     xhr.open("get",`http://127.0.0.1:8080/ajouterUtilisateur?nom=${nom}&prenom=${prenom}&pseudo=${pseudo}&mdp=${mdp}`,true);
