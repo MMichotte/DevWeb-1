@@ -72,8 +72,8 @@ Nous avons divisé notre réalisation en deux grandes catégories, le back-end q
        4. table langues
        
  1. La **table utilisateurs** est composé de 5 champs: *userId*, *nom*, *prenom*, *pseudo*, *mdp*.
- 2. La **table classement** est composé de 2 champs: *userId*, *score*.
+ 2. La **table classement** est composé de 2 champs: *userId*, *score*.<br/>
  Ces deux tables sont liées grâce au champ *userId* qui se trouve réspéctivement dans chacune des deux tables (cfr: image).
  3. La **table mots** est composé de 2 champs: *languesId*, *mot*.
- 4. La **table langues** est composé de 2 champs: *languesId*, *nom*.
+ 4. La **table langues** est composé de 2 champs: *languesId*, *nom*.<br/>
  Ces deux tables sont liées grâce au champ *languesId* qui se trouve réspéctivement dans chacune des deux tables (cfr: image).
