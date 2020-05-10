@@ -6,6 +6,10 @@ document.addEventListener('DOMContentLoaded', function (){
     inscriptionForm.addEventListener("submit", submitConnexionForm); 
 });                  
 
+/**
+ * 
+ * @param {string} event => permet de récuperer les éléments des champs cible 
+ */
 function submitConnexionForm(event) {                         
     event.preventDefault();                               
     let form = this;                         

@@ -133,20 +133,27 @@ function resetAll() {
   resetClavier();
 
 }
-
-// Perdaens
+/**
+ * Fonction qui permet de remettre la couleur par défaut des touches du clavier 
+ */
 function resetClavier() {
   for (c of clavier) {
     document.getElementById('lettre_' + c.toLowerCase()).style.backgroundColor = "#a0522d";
   }
 }
 
-// Perdaens
+/**
+ * Cette fonction permet d'afficher à la fin de chaque mot le score actuel du joueur 
+ * @param {int} s => fait référence au score du joueur après chaque mot
+ */
 function setScore(s) {
   document.getElementById("score").innerHTML = s + "/" + nbrMotMax;
 }
 
-//Perdaens
+/**
+ * Fonction qui permet d'indiquer au joueur à quel mot il se trouve dans la liste
+ * @param {int} m => fait référence au numéro du mot actuel à trouvé
+ */
 function setNbrMot(m) {
   document.getElementById("nbrMot").innerHTML = m;
 }

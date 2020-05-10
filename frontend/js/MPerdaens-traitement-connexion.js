@@ -1,5 +1,12 @@
 // auteur : Perdaens Martin
 
+
+/**
+ * 
+ * @param {string} pseudoIn => pseudo de passe envoyé à la DB pour comparaison
+ * @param {string} mdpIn => mot de passe envoyé à la DB pour comparaison 
+ */
+
 /* ***** appel ajax ***** */
 function connexionUser(pseudoIn, mdpIn) {
     let xhr = new XMLHttpRequest();                                                             
