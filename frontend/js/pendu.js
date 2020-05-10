@@ -22,6 +22,7 @@ let nomTouche='';
 let utilisateur = null; //Objet: contient les données utilsateur après la connexion
 
 // GESTION DU CLAVIER
+// Geof
 function arrayVersString(i){
 	let str="";
 	for (let a=0; a < i.length; a++) {
@@ -33,11 +34,13 @@ function arrayVersString(i){
 	return str;
 }
 
+//Geof
 function recuperer() {
   document.getElementById("solution").innerHTML=arrayVersString(solution);
   setNbrMot(nbrMot);
 }
 
+// Geof
 document.addEventListener('keydown', (event) => {
    nomTouche = event.key;
    let nomToucheUpper = nomTouche.toUpperCase();
@@ -88,7 +91,7 @@ document.addEventListener('keydown', (event) => {
 }, false);
 
 
-
+// Michotte
 function finDeMot() {
   score += 1 - (nombreErreur/nombreDivision);
   score = parseFloat(score.toFixed(2));
@@ -117,6 +120,8 @@ function finDeMot() {
   document.getElementById('solution').style.color = 'black';
 }
 
+
+// Maxime
 function resetAll() {
   nombreErreur=0;
   nbreLettretrouvee=0;
@@ -129,20 +134,25 @@ function resetAll() {
 
 }
 
+// Perdaens
 function resetClavier() {
   for (c of clavier) {
     document.getElementById('lettre_' + c.toLowerCase()).style.backgroundColor = "#a0522d";
   }
 }
 
+// Perdaens
 function setScore(s) {
   document.getElementById("score").innerHTML = s + "/" + nbrMotMax;
 }
+
+//Perdaens
 function setNbrMot(m) {
   document.getElementById("nbrMot").innerHTML = m;
 }
 
 
+// Michotte
 function deconnexion(){
   resetAll();
   document.getElementById('motLangues').selectedIndex = 0;
@@ -159,6 +169,7 @@ function deconnexion(){
 
 let insModal, insBtn, insClose, conModal, conBtn, conClose
 
+// Michotte
 document.addEventListener('DOMContentLoaded', function (){
 
     setScore(0);
@@ -204,6 +215,7 @@ document.addEventListener('DOMContentLoaded', function (){
 
 });
 
+// Michotte
 function closPopUps() {
   isInPopup = false;
   insModal.style.display = "none";
