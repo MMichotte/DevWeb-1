@@ -10,7 +10,7 @@
 /* ***** appel ajax ***** */
 function connexionUser(pseudoIn, mdpIn) {
     let xhr = new XMLHttpRequest();                                                             
-    xhr.open('get', "http://localhost:8080/connexion?pseudo=" + pseudoIn + "&mdp="+ mdpIn, true);    
+    xhr.open('get', "/connexion?pseudo=" + pseudoIn + "&mdp="+ mdpIn, true);    
     xhr.onload =                                                                                
         function traiterReponse() { 
             let reponse = JSON.parse(xhr.responseText)[0];

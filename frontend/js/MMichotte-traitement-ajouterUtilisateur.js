@@ -11,7 +11,7 @@
  */
 function ajoutUtilisateur(nom,prenom,pseudo,mdp){
     xhr = new XMLHttpRequest();
-    xhr.open("get",`http://127.0.0.1:8080/ajouterUtilisateur?nom=${nom}&prenom=${prenom}&pseudo=${pseudo}&mdp=${mdp}`,true);
+    xhr.open("get",`/ajouterUtilisateur?nom=${nom}&prenom=${prenom}&pseudo=${pseudo}&mdp=${mdp}`,true);
     xhr.onerror = 
         function (){
             console.log("ERROR  --  status: " + this.status + ", readyState: " + this.readyState);
