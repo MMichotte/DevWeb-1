@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function (){
 });                  
 
 /**
- * 
+ * Fonction qui permet de récupérer la valeur des champs "username" et "password" du formulaire de connexion
  * @param {string} event => permet de récuperer les éléments des champs cible 
  */
 function submitConnexionForm(event) {                         

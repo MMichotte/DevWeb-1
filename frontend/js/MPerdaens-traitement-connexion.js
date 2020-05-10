@@ -2,7 +2,7 @@
 
 
 /**
- * 
+ * Fonction qui permet de s'identifier entant qu'utilisateur via une requête
  * @param {string} pseudoIn => pseudo de passe envoyé à la DB pour comparaison
  * @param {string} mdpIn => mot de passe envoyé à la DB pour comparaison 
  */
@@ -19,7 +19,7 @@ function connexionUser(pseudoIn, mdpIn) {
                 document.getElementById('etatPseudo').style.color = 'red';
             }
             else{
-                utilisateur = reponse
+                utilisateur = reponse;
                 document.getElementById("li_dec").style.display = "table-cell";
                 document.getElementById("li_con").style.display = "none";
                 document.getElementById("li_ins").style.display = "none";
