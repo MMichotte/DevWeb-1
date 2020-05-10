@@ -140,6 +140,7 @@ select {
 
 #c1 {
   width: 300px;
+  width: 25%;
   text-align: center;
 }
 
@@ -179,6 +180,7 @@ select {
 }
 #zone_image_pendu {
   width: 300px;
+  width: 25%;
   height: 250px;
   border: 4px solid black;
   border-radius: 15px;
@@ -193,6 +195,7 @@ select {
 
 #tableau_classement {
   width: 300px;
+  width: 25%;
   height: 230px;
   padding : 10px;
   border: 4px solid black;

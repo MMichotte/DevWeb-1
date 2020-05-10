@@ -155,7 +155,7 @@ function resetAll() {
   setScore(0);
   setNbrMot(nbrMot);
   resetClavier();
-
+  document.getElementById('image_pendu').src = "img/img_pendu/0.png";
 }
 /**
  * Fonction qui permet de remettre la couleur par défaut des touches du clavier
