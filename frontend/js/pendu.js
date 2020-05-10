@@ -64,7 +64,7 @@ document.addEventListener('keydown', (event) => {
    nomTouche = event.key;
    let nomToucheUpper = nomTouche.toUpperCase();
    let lettreOk = clavier.includes(nomToucheUpper);
-  if(!isInPopup && !attendreAction && lettreOk){
+  if(!isInPopup && !attendreAction && lettreOk && utilisateur != null){
 
 
 
