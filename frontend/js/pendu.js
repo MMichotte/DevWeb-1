@@ -22,7 +22,14 @@ let nomTouche='';
 let utilisateur = null; //Objet: contient les données utilsateur après la connexion
 
 // GESTION DU CLAVIER
-// Geof
+/**
+ * Fonction qui va convertir un array reçu en string
+ *
+ * @param {array} i - un array qui doit être transformé en string
+ *
+ * @return {string} le string de l'array
+ */
+
 function arrayVersString(i){
 	let str="";
 	for (let a=0; a < i.length; a++) {
@@ -34,13 +41,25 @@ function arrayVersString(i){
 	return str;
 }
 
-//Geof
+/**
+ * Fonction qui va récuperer la valeur de la requête XHR et la placer
+ * dans l'html à l'endroit inqiqué. Elle va faire appel à la fonction
+ * arrayVersString pour transformer l'array.
+ */
+
 function recuperer() {
   document.getElementById("solution").innerHTML=arrayVersString(solution);
   setNbrMot(nbrMot);
 }
 
-// Geof
+/**
+ * Fonction qui va gérer les actions du clavier, des touches et de la position
+ * des lettres dans la solution. Elle va aussi gérer la couleur de la solution
+ * en fonction de la réussite ou non. Et enfin elle va gérer l'apparition du
+ * bouton suivant qui va permettre de changer de mot quand nous avons trouvé ou
+ * non le mot. 
+ */
+
 document.addEventListener('keydown', (event) => {
    nomTouche = event.key;
    let nomToucheUpper = nomTouche.toUpperCase();
@@ -92,9 +111,9 @@ document.addEventListener('keydown', (event) => {
 
 
 /**
- * Fonction utilitaire permettant de rafraîchir les données 
- * lors d'un changement de mots. 
- * 
+ * Fonction utilitaire permettant de rafraîchir les données
+ * lors d'un changement de mots.
+ *
  */
 function finDeMot() {
   score += 1 - (nombreErreur/nombreDivision);
@@ -139,7 +158,7 @@ function resetAll() {
 
 }
 /**
- * Fonction qui permet de remettre la couleur par défaut des touches du clavier 
+ * Fonction qui permet de remettre la couleur par défaut des touches du clavier
  */
 function resetClavier() {
   for (c of clavier) {
@@ -148,7 +167,7 @@ function resetClavier() {
 }
 
 /**
- * Cette fonction permet d'afficher à la fin de chaque mot le score actuel du joueur 
+ * Cette fonction permet d'afficher à la fin de chaque mot le score actuel du joueur
  * @param {double} s => fait référence au score du joueur après chaque mot
  */
 function setScore(s) {
@@ -193,7 +212,7 @@ document.addEventListener('DOMContentLoaded', function (){
     insClose = document.getElementById("insClose");
 
     /**
-     * Fonction faisant apparaître le popup d'inscription 
+     * Fonction faisant apparaître le popup d'inscription
      * lors de l'appui sur le bouton "inscription".
      */
     insBtn.onclick = function() {
@@ -202,7 +221,7 @@ document.addEventListener('DOMContentLoaded', function (){
     }
 
     /**
-     * Fonction faisant disparaître le popup d'inscription 
+     * Fonction faisant disparaître le popup d'inscription
      * lors de l'appui sur le "X".
      */
     insClose.onclick = function() {
@@ -214,7 +233,7 @@ document.addEventListener('DOMContentLoaded', function (){
     conClose = document.getElementById("conClose");
 
     /**
-     * Fonction faisant apparaître le popup de connexion 
+     * Fonction faisant apparaître le popup de connexion
      * lors de l'appui sur le bouton "connexion".
      */
     conBtn.onclick = function() {
@@ -223,7 +242,7 @@ document.addEventListener('DOMContentLoaded', function (){
     }
 
     /**
-     * Fonction faisant disparaître le popup de connexion 
+     * Fonction faisant disparaître le popup de connexion
      * lors de l'appui sur le "X".
      */
     conClose.onclick = function() {

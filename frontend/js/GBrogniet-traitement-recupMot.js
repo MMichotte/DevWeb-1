@@ -8,6 +8,15 @@ let motChoix;
 let solution;
 let listeMots;
 
+/**
+ * Fonction faisant appel à l'api afin d'aller chercher la langue voulu
+ * dans la DB et traitant la réponse de celle-ci.
+ * Fonction qui permet de jouer ou non si on est connecté ou pas.
+ *
+ * @param {String} languesIdIn - le choix de langues du jeu
+ * @return {array} la liste de mots de la langue choisie
+ */
+
 function getMot(select) {
     let selectElem = document.getElementById('motLangues');
     let index = selectElem.selectedIndex;
@@ -34,6 +43,15 @@ function getMot(select) {
     return false;
 }
 
+/**
+ * Fonction faisant appel à la fonction getMot() afin d'aller chercher
+ * aléatoirement un mot dans la liste récupérée par rapport au nombre
+ * aléatoire créé et par rapport au temps de réponse de la requête.
+ *
+ * Cette fonction va faire appel à la fonction récupérer() qui se trouve dans
+ * pendu.js 
+ *
+ */
 
 function recupMotAleatoire() {
   function nombreAleatoire(min, max) {
