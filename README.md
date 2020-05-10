@@ -58,7 +58,7 @@ Nous avons divisé notre réalisation en deux grandes catégories, le back-end q
 
 # Style de la page voulu :
 
-<img src="frontend/img/styleInterfaceFinal.png" alt="Style de la page"/>
+<img src="../img/styleInterfaceFinale.png" alt="Style de la page"/>
 
 # Tables de la base de données  
 
