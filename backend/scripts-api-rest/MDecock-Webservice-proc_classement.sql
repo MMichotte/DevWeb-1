@@ -1,6 +1,6 @@
 /* auteur: maxime De Cock HE201554  */
 
-ALTER PROCEDURE "DBA"."proc_classement"()
+CREATE PROCEDURE "DBA"."proc_classement"()
 
 RESULT(pseudo VARCHAR (50), score DOUBLE )
 BEGIN
