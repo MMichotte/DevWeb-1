@@ -40,8 +40,8 @@ Nous avons divisé notre réalisation en deux grandes catégories, le back-end q
 
 3. Des Web Services (avec les procédures associées) : 
 
-    - Un Web Service capable de récupérer les mots et les placer dans l'HTML
-    - Un Web Service capable de récupérer la langue souhaité et donc d'y proposer les mots de la langue choisie
+    - Un Web Service capable d'ajouter des utilisateurs dans la base de données via un formulaire
+    - Un Web Service capable de récupérer la langue souhaité et donc d'y proposer les mots de la langue choisie ainsi que de récupérer les mots de la langue choisie
     - Un Web Service capable d'ajouter et de récupérer les scores de la table de score ainsi que les nom des joueurs
     - Un Web Service qui va nous permettre de se connecter à la page et nous permettre de jouer au jeu
     
