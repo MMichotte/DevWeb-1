@@ -145,7 +145,10 @@ function finDeMot() {
 }
 
 
-// Maxime
+/* fonction qui permet de remettre
+ *  toutes les valeurs à leur valeur initiale
+ */
+
 function resetAll() {
   nombreErreur=0;
   nbreLettretrouvee=0;
@@ -155,7 +158,8 @@ function resetAll() {
   setScore(0);
   setNbrMot(nbrMot);
   resetClavier();
-
+  document.getElementById('image_pendu').src = "img/img_pendu/0.png";
+  document.getElementById("button_cache").style.display="none";
 }
 /**
  * Fonction qui permet de remettre la couleur par défaut des touches du clavier
@@ -259,6 +263,7 @@ document.addEventListener('DOMContentLoaded', function (){
           closPopUps();
         }
       }
+
 
 });
 

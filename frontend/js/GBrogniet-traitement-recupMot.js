@@ -31,9 +31,8 @@ function getMot(select) {
 
       let params = `languesIdIn=${select.options[index].value}`
       let xhr = new XMLHttpRequest();
-      xhr.open('get','/recupMot?'+params, true)
 
-      xhr.open('get',request, true);
+      xhr.open('get','/recupMot?'+params, true)
         xhr.onload =
           function recupMot() {;
               listeMots = JSON.parse(xhr.responseText);
