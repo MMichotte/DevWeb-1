@@ -6,7 +6,7 @@
 	function recupClassement() {
 		let xhr = new XMLHttpRequest();
 
-		xhr.open('get', 'http://localhost:8080/classement', true);
+		xhr.open('get', '/classement', true);
 		xhr.onload =
 			function () {
 				let table_jeu = 'table_jeu';
