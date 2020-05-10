@@ -60,6 +60,8 @@ document.addEventListener('keydown', (event) => {
       document.getElementById('lettre_' + nomTouche.toLowerCase()).style.backgroundColor = '#666666';
       if (nbreLettretrouvee==motChoixLongueur) {
         //le mot complet à été trouvé !
+        document.getElementById('solution').innerHTML = motChoix;
+        document.getElementById('solution').style.color = 'green';
         document.getElementById('button_cache').style.display='block';
         attendreAction = true;
       }
@@ -71,10 +73,12 @@ document.addEventListener('keydown', (event) => {
       document.getElementById('lettre_' + nomTouche.toLowerCase()).style.backgroundColor = '#666666';
 
       if (nombreErreur == nbrErreurMax) {
+				document.getElementById('solution').innerHTML = motChoix;
+				document.getElementById('solution').style.color = 'red';
 				document.getElementById('button_cache').style.display='block';
                 attendreAction = true;
-        //alert("Vous n'avez pas trouvé le mot : " + motChoix);
-        //finDeMot();
+                //alert("Vous n'avez pas trouvé le mot : " + motChoix);
+                //finDeMot();
       }
     }
 		lettreTape+=nomTouche;
@@ -110,7 +114,7 @@ function finDeMot() {
       recupMotAleatoire();
   }
   setScore(score);
-
+  document.getElementById('solution').style.color = 'black';
 }
 
 function resetAll() {
