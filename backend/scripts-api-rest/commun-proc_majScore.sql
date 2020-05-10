@@ -1,4 +1,4 @@
-ALTER PROCEDURE "DBA"."proc_majScore"(in idin int, in scorein double )
+CREATE PROCEDURE "DBA"."proc_majScore"(in idin int, in scorein double )
 
 result(information varchar(50))
 BEGIN
