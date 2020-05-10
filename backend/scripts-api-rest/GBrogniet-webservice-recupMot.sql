@@ -1,3 +1,4 @@
+/*  author : Brogniet Geoffrey - HE201652 */
 CREATE PROCEDURE "dba"."mots"(in langueIdIn VARCHAR(2))
 
 RESULT(languesId varchar(2), mot VARCHAR(50), nom VARCHAR(30))
